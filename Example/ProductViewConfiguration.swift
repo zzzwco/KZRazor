@@ -46,9 +46,11 @@ struct DefaultProductViewConfiguration: ProductViewConfiguration {
     nameL.kz.text(product.name)
       .kz.font(.kz.size(22))
     
-    iconImgV.kz.contentMode(.scaleAspectFit)
-      .kz.tintColor(.random)
-      .kz.image(.kz.systemName(product.icon))
+    if #available(iOS 13.0, *) {
+      iconImgV.kz.contentMode(.scaleAspectFit)
+        .kz.tintColor(.random)
+        .kz.image(.kz.systemName(product.icon))
+    }
     
     introL.kz.numberOfLines(0)
       .kz.textColor(.gray)

@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "KZRazor"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "A tool kit"
 
 
@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.author             = { "zzzwco" => "zzzwco@outlook.com" }
   spec.social_media_url   = "https://twitter.com/zzzwco"
 
-  spec.ios.deployment_target = "12.0"
+  spec.ios.deployment_target = "11.0"
 
   spec.requires_arc = true
   spec.swift_versions = "5.0"
@@ -20,5 +20,6 @@ Pod::Spec.new do |spec|
   spec.source_files  = "Source", "Source/*.swift"
 
   spec.dependency "SnapKit"
+  spec.dependency "QMUIKit"
 
 end

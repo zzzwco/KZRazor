@@ -31,10 +31,22 @@ import SnapKit
 open class KZFlexView: UIScrollView {
   
   public var stackView = UIStackView()
+  
   public var spacing: CGFloat {
     get { stackView.spacing }
     set { stackView.spacing = newValue }
   }
+  
+  public var alignment: UIStackView.Alignment {
+    get { stackView.alignment }
+    set { stackView.alignment = newValue }
+  }
+  
+  public var distribution: UIStackView.Distribution {
+    get { stackView.distribution }
+    set { stackView.distribution = newValue }
+  }
+  
   public var margins: UIEdgeInsets {
     get { stackView.layoutMargins }
     set {
@@ -42,14 +54,17 @@ open class KZFlexView: UIScrollView {
       stackView.layoutMargins = newValue
     }
   }
+  
   public func addArrangedSubview(_ view: UIView) {
     stackView.addArrangedSubview(view)
   }
+  
   public func addArrangedSubviews(_ views: [UIView]) {
     views.forEach { stackView.addArrangedSubview($0) }
   }
-  public func setCustomSpacing(_ spacing: CGFloat, after: UIView) {
-    stackView.setCustomSpacing(spacing, after: after)
+  
+  public func setCustomSpacing(_ spacing: CGFloat, after view: UIView) {
+    stackView.setCustomSpacing(spacing, after: view)
   }
   
   /// Create an instance
@@ -85,4 +100,55 @@ open class KZFlexView: UIScrollView {
     }
   }
   
+}
+
+public extension KZWrapper where T: KZFlexView {
+  
+  @discardableResult
+  func margins(_ length: CGFloat) -> T {
+    base.margins = .init(top: length, left: length, bottom: length, right: length)
+    return base
+  }
+  
+  @discardableResult
+  func margins(_ insets: UIEdgeInsets) -> T {
+    base.margins = insets
+    return base
+  }
+  
+  @discardableResult
+  func spacing(_ spacing: CGFloat) -> T {
+    base.spacing = spacing
+    return base
+  }
+  
+  @discardableResult
+  func alignment(_ alignment: UIStackView.Alignment) -> T {
+    base.alignment = alignment
+    return base
+  }
+  
+  @discardableResult
+  func distribution(_ distribution: UIStackView.Distribution) -> T {
+    base.distribution = distribution
+    return base
+  }
+  
+  @discardableResult
+  func addArrangedSubview(_ view: UIView) -> T {
+    base.addArrangedSubview(view)
+    return base
+  }
+  
+  @discardableResult
+  func addArrangedSubviews(_ views: [UIView]) -> T {
+    base.addArrangedSubviews(views)
+    return base
+  }
+  
+  @discardableResult
+  func customSpacing(_ spacing: CGFloat, after view: UIView) -> T {
+    base.setCustomSpacing(spacing, after: view)
+    return base
+  }
 }

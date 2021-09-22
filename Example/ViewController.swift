@@ -13,6 +13,7 @@ class ViewController: UIViewController {
   private let title1L = titleLClousure("iPhone、iPad")
   private let title2L = titleLClousure("Mac")
   private let iphonesView = KZFlexView(axis: .horizontal)
+  private var isiPhonesViewHidden = false
   
   private static let titleLClousure: (String) -> UILabel = { title -> UILabel in
     UILabel().kz.with { v in
@@ -27,6 +28,10 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     title = "Apple Store"
     view.backgroundColor = .white
+    navigationItem.rightBarButtonItem = UIBarButtonItem(
+      barButtonSystemItem: .refresh, target: self, action: #selector(refresh))
+//    navigationItem.leftBarButtonItem = UIBarButtonItem(
+//      barButtonSystemItem: .action, target: self, action: #selector(tmp))
     
     flexViewY.kz.with { v in
       v.margins = .init(top: 20, left: 20, bottom: 20, right: 20)
@@ -36,8 +41,7 @@ class ViewController: UIViewController {
     .kz.makeConstraints { m in
       m.edges.equalToSuperview()
     }
-    
-    title1L.kz.addToFlexView(flexViewY)
+    .kz.addArrangedSubview(title1L)
     
     iphonesView.kz.with { v in
       v.showsHorizontalScrollIndicator = false
@@ -67,5 +71,14 @@ class ViewController: UIViewController {
     }
   }
   
+
+  @objc func refresh() {
+    isiPhonesViewHidden = !isiPhonesViewHidden
+    title1L.isHidden = isiPhonesViewHidden
+    iphonesView.isHidden = isiPhonesViewHidden
+  }
   
+  @objc func tmp() {
+    
+  }
 }

@@ -28,7 +28,7 @@
 import Foundation
 import UIKit
 
-public extension KZWrapper where T == CGFloat {
+public extension CGFloat {
   
-  static let OnePixel = 1.0 / UIScreen.main.scale
+  static let onePixel = 1.0 / UIScreen.main.scale
 }
