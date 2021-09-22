@@ -311,20 +311,26 @@ PODS:
   - QMUIKit/QMUIResources (4.3.0)
   - QMUIKit/QMUIWeakObjectContainer (4.3.0)
   - SnapKit (5.0.1)
+  - SwiftMessages (9.0.4):
+    - SwiftMessages/App (= 9.0.4)
+  - SwiftMessages/App (9.0.4)
 
 DEPENDENCIES:
   - QMUIKit
   - SnapKit
+  - SwiftMessages
 
 SPEC REPOS:
   trunk:
     - QMUIKit
     - SnapKit
+    - SwiftMessages
 
 SPEC CHECKSUMS:
   QMUIKit: 67888be9aa0ee0b12b8a219fcea2eec900afd841
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftMessages: 082ed63613a49fa8e749cd6000bb0a8b9bbc736f
 
-PODFILE CHECKSUM: 385d34fde82ea26bd7fdb7073f8a21a0b653c4a5
+PODFILE CHECKSUM: ba58f72dbd3dc5a72c1526b257cda522565e8e56
 
 COCOAPODS: 1.11.0

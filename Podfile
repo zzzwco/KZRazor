@@ -6,6 +6,7 @@ target 'KZRazor' do
   use_frameworks!
   pod 'SnapKit'
   pod 'QMUIKit'
+  pod 'SwiftMessages'
 
  # Pods for KZRazor
 

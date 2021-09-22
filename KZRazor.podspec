@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "KZRazor"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "A tool kit"
 
 
@@ -21,5 +21,6 @@ Pod::Spec.new do |spec|
 
   spec.dependency "SnapKit"
   spec.dependency "QMUIKit"
+  spec.dependency "SwiftMessages"
 
 end

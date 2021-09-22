@@ -28,10 +28,10 @@
 import Foundation
 import QMUIKit
 
-class KZTips {
+public class KZTips {
   
   @discardableResult
-  static func showLoading(
+  public static func showLoading(
     in view: UIView, withText: String? = nil, isUserInteractionEnabled: Bool = false,
     detailText: String? = nil
   ) -> QMUITips {
@@ -41,7 +41,7 @@ class KZTips {
   }
   
   @discardableResult
-  static func showText(
+  public static func showText(
     withText: String?, in view: UIView, isUserInteractionEnabled: Bool = true,
     detailText: String? = nil, hideAfterDelay: TimeInterval = 1.5
   ) -> QMUITips {
@@ -52,7 +52,7 @@ class KZTips {
   }
 
   @discardableResult
-  static func showInfo(
+  public static func showInfo(
     _ text: String?, in view: UIView, isUserInteractionEnabled: Bool = true,
     detailText: String? = nil, hideAfterDelay: TimeInterval = 1.5
   ) -> QMUITips {
@@ -63,7 +63,7 @@ class KZTips {
   }
 
   @discardableResult
-  static func showSucceed(
+  public static func showSucceed(
     _ text: String?, in view: UIView, isUserInteractionEnabled: Bool = true,
     detailText: String? = nil, hideAfterDelay: TimeInterval = 1.5
   ) -> QMUITips {
@@ -74,7 +74,7 @@ class KZTips {
   }
 
   @discardableResult
-  static func showError(
+  public static func showError(
     _ text: String?, in view: UIView, isUserInteractionEnabled: Bool = true,
     detailText: String? = nil, hideAfterDelay: TimeInterval = 1.5
   ) -> QMUITips {
@@ -84,7 +84,7 @@ class KZTips {
     return tips
   }
 
-  static func hideAllTips() {
+  public static func hideAllTips() {
     QMUITips.hideAllTips()
   }
 }

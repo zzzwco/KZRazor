@@ -39,6 +39,7 @@
 		3285785226FB1B0800AFF3E9 /* UIScreenEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285785126FB1B0800AFF3E9 /* UIScreenEx.swift */; };
 		3285785426FB1C6100AFF3E9 /* UIApplicationEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285785326FB1C6100AFF3E9 /* UIApplicationEx.swift */; };
 		3285785626FB1D8300AFF3E9 /* UIViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285785526FB1D8300AFF3E9 /* UIViewControllerEx.swift */; };
+		3285785A26FB5C5300AFF3E9 /* KZHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285785926FB5C5300AFF3E9 /* KZHud.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		3285785126FB1B0800AFF3E9 /* UIScreenEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenEx.swift; sourceTree = "<group>"; };
 		3285785326FB1C6100AFF3E9 /* UIApplicationEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationEx.swift; sourceTree = "<group>"; };
 		3285785526FB1D8300AFF3E9 /* UIViewControllerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerEx.swift; sourceTree = "<group>"; };
+		3285785926FB5C5300AFF3E9 /* KZHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZHud.swift; sourceTree = "<group>"; };
 		8823FFAADD882A4DF4E98252 /* Pods-KZRazor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZRazor.release.xcconfig"; path = "Target Support Files/Pods-KZRazor/Pods-KZRazor.release.xcconfig"; sourceTree = "<group>"; };
 		B69DBD205A8840A1B993F4CB /* Pods-KZRazor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZRazor.debug.xcconfig"; path = "Target Support Files/Pods-KZRazor/Pods-KZRazor.debug.xcconfig"; sourceTree = "<group>"; };
 		C5F88F387CBD8EBDDF457848 /* Pods_KZRazor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KZRazor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +148,7 @@
 				3285784926FB0F0900AFF3E9 /* KZTextField.swift */,
 				3285784B26FB159500AFF3E9 /* KZTextView.swift */,
 				3285784D26FB1A2600AFF3E9 /* KZTips.swift */,
+				3285785926FB5C5300AFF3E9 /* KZHud.swift */,
 				327D447926F58954006E0E9E /* KZView.swift */,
 				327D447726F58954006E0E9E /* NSObjectEx.swift */,
 				327D447626F58954006E0E9E /* Reflectable.swift */,
@@ -305,6 +308,7 @@
 				327D448426F58954006E0E9E /* KZFlexView.swift in Sources */,
 				327D448226F58954006E0E9E /* KZView.swift in Sources */,
 				3285784E26FB1A2600AFF3E9 /* KZTips.swift in Sources */,
+				3285785A26FB5C5300AFF3E9 /* KZHud.swift in Sources */,
 				327D446226F58793006E0E9E /* AppDelegate.swift in Sources */,
 				327D448526F58954006E0E9E /* UIFontEx.swift in Sources */,
 				327D449326F5D046006E0E9E /* Extensions.swift in Sources */,
