@@ -31,7 +31,7 @@ import UIKit
 
 public class KZHud {
   
-  ///  The default config
+  ///  The default view config
   ///
   ///  Custom:
   ///  ```
@@ -40,7 +40,7 @@ public class KZHud {
   ///  // other config
   ///  ```
   ///
-  public static var config: SwiftMessages.Config {
+  public static var viewConfig: SwiftMessages.Config {
     var config = SwiftMessages.Config()
     config.presentationContext = .window(windowLevel: .normal)
     config.duration = .forever
@@ -50,15 +50,25 @@ public class KZHud {
     return config
   }
   
-  @discardableResult
-  public static func show<T: UIView>(view: T, height: CGFloat? = nil, config: SwiftMessages.Config = config) -> T {
+  /// Show View
+  public static func show<T: UIView>(view: T, height: CGFloat? = nil,
+                                     config: SwiftMessages.Config = viewConfig) {
     let mv = MessageView()
     mv.backgroundHeight = height
     mv.installContentView(view)
     SwiftMessages.show(config: config, view: mv)
-    return view
   }
-
+  
+  /// Show VC
+  public static func show<T: UIViewController>(vc: T, source: T, height: CGFloat? = nil,
+                                               layout: SwiftMessagesSegue.Layout = .centered) {
+    let segue = SwiftMessagesSegue(identifier: nil, source: source, destination: vc)
+    segue.messageView.backgroundHeight = height
+    segue.configure(layout: layout)
+    segue.perform()
+  }
+  
+  /// Hide all hud
   public static func hideAll() {
     SwiftMessages.hide(animated: true)
     SwiftMessages.hideAll()

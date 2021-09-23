@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftMessages
 
 class ViewController: UIViewController {
   

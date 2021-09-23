@@ -31,7 +31,25 @@ import UIKit
 class TmpController: UIViewController {
   
   override func viewDidLoad() {
+    view.backgroundColor = .white
     
+    KZButton().kz.title("HELLO")
+      .kz.addTarget(self, action: #selector(push), for: .touchUpInside)
+      .kz.addToView(view)
+      .kz.makeConstraints { m in
+        m.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+        m.centerX.equalToSuperview()
+      }
   }
   
+  @objc func push() {
+    let vc = UIViewController().kz.with { v in
+      v.view.backgroundColor = .random
+    }
+    navigationController?.pushViewController(vc, animated: true)
+  }
+  
+  deinit {
+    KZPrint.log(message: self)
+  }
 }
