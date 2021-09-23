@@ -35,6 +35,13 @@ public typealias KZView = UIView
 
 public extension KZWrapper where T: KZView {
   
+  enum GradientOrientation {
+    case topRightBottomLeft
+    case topLeftBottomRight
+    case horizontal
+    case vertical
+  }
+  
   @discardableResult
   func backgroundColor(_ color: UIColor) -> T {
     base.backgroundColor = color
@@ -106,6 +113,31 @@ public extension KZWrapper where T: KZView {
   func border(width: CGFloat, color: UIColor?) -> T {
     base.layer.borderWidth = width
     base.layer.borderColor = color?.cgColor
+    return base
+  }
+  
+  /// Remember to set gradientLayer's frame in `layoutSubViews`
+  @discardableResult
+  func gradient(colors: [UIColor], orientation: GradientOrientation,
+                layerHandler: ((CAGradientLayer) -> ())) -> T {
+    let gradientLayer = CAGradientLayer()
+    gradientLayer.colors = colors.map { $0.cgColor }
+    switch orientation {
+    case .topLeftBottomRight:
+      gradientLayer.startPoint = .init(x: 0, y: 0)
+      gradientLayer.endPoint = .init(x: 1, y: 1)
+    case .topRightBottomLeft:
+      gradientLayer.startPoint = .init(x: 0, y: 1)
+      gradientLayer.endPoint = .init(x: 1, y: 0)
+    case .horizontal:
+      gradientLayer.startPoint = .init(x: 0, y: 0.5)
+      gradientLayer.endPoint = .init(x: 1, y: 0.5)
+    case .vertical:
+      gradientLayer.startPoint = .init(x: 0, y: 0)
+      gradientLayer.endPoint = .init(x: 0, y: 1)
+    }
+    layerHandler(gradientLayer)
+    base.layer.insertSublayer(gradientLayer, at: 0)
     return base
   }
 }

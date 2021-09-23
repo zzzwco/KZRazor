@@ -1,8 +1,8 @@
 //
-//  KZHud.swift
+//  TmpController.swift
 //  KZRazor
 //
-//  Created by zzzwco on 2021/9/22.
+//  Created by zzzwco on 2021/9/23.
 //
 //  Copyright (c) 2021 zzzwco <zzzwco@outlook.com>
 //
@@ -26,41 +26,12 @@
 //
 
 import Foundation
-import SwiftMessages
 import UIKit
 
-public class KZHud {
+class TmpController: UIViewController {
   
-  ///  The default config
-  ///
-  ///  Custom:
-  ///  ```
-  ///  var cfg = KZHud.config
-  ///  cfg.presentationStyle = .center
-  ///  // other config
-  ///  ```
-  ///
-  public static var config: SwiftMessages.Config {
-    var config = SwiftMessages.Config()
-    config.presentationContext = .window(windowLevel: .normal)
-    config.duration = .forever
-    config.presentationStyle = .center
-    config.keyboardTrackingView = KeyboardTrackingView()
-    config.dimMode = .color(color: .init(red: 0, green: 0, blue: 0, alpha: 0.3), interactive: true)
-    return config
+  override func viewDidLoad() {
+    
   }
   
-  @discardableResult
-  public static func show<T: UIView>(view: T, height: CGFloat? = nil, config: SwiftMessages.Config = config) -> T {
-    let mv = MessageView()
-    mv.backgroundHeight = height
-    mv.installContentView(view)
-    SwiftMessages.show(config: config, view: mv)
-    return view
-  }
-
-  public static func hideAll() {
-    SwiftMessages.hide(animated: true)
-    SwiftMessages.hideAll()
-  }
 }

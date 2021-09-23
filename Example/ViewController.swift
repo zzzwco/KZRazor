@@ -30,8 +30,8 @@ class ViewController: UIViewController {
     view.backgroundColor = .white
     navigationItem.rightBarButtonItem = UIBarButtonItem(
       barButtonSystemItem: .refresh, target: self, action: #selector(refresh))
-//    navigationItem.leftBarButtonItem = UIBarButtonItem(
-//      barButtonSystemItem: .action, target: self, action: #selector(tmp))
+    navigationItem.leftBarButtonItem = UIBarButtonItem(
+      barButtonSystemItem: .play, target: self, action: #selector(tmp))
     
     flexViewY.kz.with { v in
       v.margins = .init(top: 20, left: 20, bottom: 20, right: 20)
@@ -79,6 +79,6 @@ class ViewController: UIViewController {
   }
   
   @objc func tmp() {
-    
+    navigationController?.pushViewController(TmpController(), animated: true)
   }
 }

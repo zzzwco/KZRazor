@@ -63,6 +63,12 @@ public extension KZWrapper where T: KZButton {
     base.cornerRadius = QMUIButtonCornerRadiusAdjustsBounds
     return base
   }
+  
+  @discardableResult
+  func numberOfLines(_ lines: Int) -> T {
+    base.titleLabel?.numberOfLines = lines
+    return base
+  }
 }
 
 // MARK: - UIButton extension

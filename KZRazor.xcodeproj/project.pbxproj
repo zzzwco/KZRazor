@@ -40,6 +40,7 @@
 		3285785426FB1C6100AFF3E9 /* UIApplicationEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285785326FB1C6100AFF3E9 /* UIApplicationEx.swift */; };
 		3285785626FB1D8300AFF3E9 /* UIViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285785526FB1D8300AFF3E9 /* UIViewControllerEx.swift */; };
 		3285785A26FB5C5300AFF3E9 /* KZHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285785926FB5C5300AFF3E9 /* KZHud.swift */; };
+		3285786C26FC176400AFF3E9 /* TmpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285786B26FC176400AFF3E9 /* TmpController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		3285785326FB1C6100AFF3E9 /* UIApplicationEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationEx.swift; sourceTree = "<group>"; };
 		3285785526FB1D8300AFF3E9 /* UIViewControllerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerEx.swift; sourceTree = "<group>"; };
 		3285785926FB5C5300AFF3E9 /* KZHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZHud.swift; sourceTree = "<group>"; };
+		3285786B26FC176400AFF3E9 /* TmpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpController.swift; sourceTree = "<group>"; };
 		8823FFAADD882A4DF4E98252 /* Pods-KZRazor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZRazor.release.xcconfig"; path = "Target Support Files/Pods-KZRazor/Pods-KZRazor.release.xcconfig"; sourceTree = "<group>"; };
 		B69DBD205A8840A1B993F4CB /* Pods-KZRazor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZRazor.debug.xcconfig"; path = "Target Support Files/Pods-KZRazor/Pods-KZRazor.debug.xcconfig"; sourceTree = "<group>"; };
 		C5F88F387CBD8EBDDF457848 /* Pods_KZRazor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KZRazor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 				327D448826F58B1C006E0E9E /* ProductViewConfiguration.swift */,
 				327D446126F58793006E0E9E /* AppDelegate.swift */,
 				327D446526F58793006E0E9E /* ViewController.swift */,
+				3285786B26FC176400AFF3E9 /* TmpController.swift */,
 				327D449226F5D046006E0E9E /* Extensions.swift */,
 				327D446726F58793006E0E9E /* Main.storyboard */,
 				327D446A26F58795006E0E9E /* Assets.xcassets */,
@@ -294,6 +297,7 @@
 				3285784C26FB159500AFF3E9 /* KZTextView.swift in Sources */,
 				327D446626F58793006E0E9E /* ViewController.swift in Sources */,
 				3285784026F755AE00AFF3E9 /* KZImageView.swift in Sources */,
+				3285786C26FC176400AFF3E9 /* TmpController.swift in Sources */,
 				3285785426FB1C6100AFF3E9 /* UIApplicationEx.swift in Sources */,
 				327D447F26F58954006E0E9E /* Reflectable.swift in Sources */,
 				327D448E26F58B1C006E0E9E /* Product.swift in Sources */,
