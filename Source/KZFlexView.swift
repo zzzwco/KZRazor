@@ -69,9 +69,10 @@ open class KZFlexView: UIScrollView {
   
   /// Create an instance
   /// - Parameter axis: Scroll direction
-  public convenience init(axis: NSLayoutConstraint.Axis) {
-    self.init()
+  public init(axis: NSLayoutConstraint.Axis) {
+    super.init(frame: .zero)
     stackView.axis = axis
+    setupUI()
     if axis == .vertical {
       stackView.snp.makeConstraints { make in
         make.width.equalToSuperview()
@@ -83,14 +84,8 @@ open class KZFlexView: UIScrollView {
     }
   }
   
-  public override init(frame: CGRect) {
-    super.init(frame: frame)
-    setupUI()
-  }
-  
-  public required init?(coder: NSCoder) {
-    super.init(coder: coder)
-    setupUI()
+  required public init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
   }
   
   func setupUI() {
