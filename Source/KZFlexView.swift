@@ -31,49 +31,49 @@ import SnapKit
 open class KZFlexView: UIScrollView {
   
   @discardableResult
-  func margins(_ length: CGFloat) -> Self {
+  public func margins(_ length: CGFloat) -> Self {
     self.margins = .init(top: length, left: length, bottom: length, right: length)
     return self
   }
   
   @discardableResult
-  func margins(_ insets: UIEdgeInsets) -> Self {
+  public func margins(_ insets: UIEdgeInsets) -> Self {
     self.margins = insets
     return self
   }
   
   @discardableResult
-  func spacing(_ spacing: CGFloat) -> Self {
+  public func spacing(_ spacing: CGFloat) -> Self {
     self.spacing = spacing
     return self
   }
   
   @discardableResult
-  func alignment(_ alignment: UIStackView.Alignment) -> Self {
+  public func alignment(_ alignment: UIStackView.Alignment) -> Self {
     self.alignment = alignment
     return self
   }
   
   @discardableResult
-  func distribution(_ distribution: UIStackView.Distribution) -> Self {
+  public func distribution(_ distribution: UIStackView.Distribution) -> Self {
     self.distribution = distribution
     return self
   }
   
   @discardableResult
-  func addArrangedSubview(_ view: UIView) -> Self {
+  public func addArrangedSubview(_ view: UIView) -> Self {
     self.stackView.addArrangedSubview(view)
     return self
   }
   
   @discardableResult
-  func addArrangedSubviews(_ views: [UIView]) -> Self {
+  public func addArrangedSubviews(_ views: [UIView]) -> Self {
     views.forEach { stackView.addArrangedSubview($0) }
     return self
   }
   
   @discardableResult
-  func customSpacing(_ spacing: CGFloat, after view: UIView) -> Self {
+  public func customSpacing(_ spacing: CGFloat, after view: UIView) -> Self {
     self.stackView.setCustomSpacing(spacing, after: view)
     return self
   }
