@@ -30,7 +30,7 @@ import Foundation
 public extension KZWrapper where T: NSObject {
   
   @discardableResult
-  func with(_ closure: (_ obj: T) -> Void) -> T {
+  func with(_ closure: (_ v: T) -> Void) -> T {
     closure(self.base)
     return self.base
   }
