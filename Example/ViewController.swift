@@ -34,34 +34,32 @@ class ViewController: UIViewController {
     navigationItem.leftBarButtonItem = UIBarButtonItem(
       barButtonSystemItem: .play, target: self, action: #selector(tmp))
     
-    flexViewY.kz.with { v in
-      v.margins = .init(top: 20, left: 20, bottom: 20, right: 20)
-      v.spacing = 20
-    }
-    .kz.addToView(view)
-    .kz.makeConstraints { m in
-      m.edges.equalToSuperview()
-    }
-    .kz.addArrangedSubview(title1L)
+    flexViewY.margins(.init(top: 20, left: 20, bottom: 20, right: 20))
+      .spacing(2)
+      .kz.addToView(view)
+      .kz.makeConstraints { m in
+        m.edges.equalToSuperview()
+      }
+      .addArrangedSubview(title1L)
     
-    iphonesView.kz.with { v in
-      v.showsHorizontalScrollIndicator = false
-      v.layer.masksToBounds = false
-      v.spacing = 15
+    iphonesView.spacing(15)
+      .kz.with { v in
+        v.showsHorizontalScrollIndicator = false
+        v.layer.masksToBounds = false
       
-      for p in Product.iPhones {
-        let cfg = DefaultProductViewConfiguration().configUI(with: p)
-        let v1 = iPhoneView(configuration: cfg)
-        v.addArrangedSubview(v1)
-        v1.kz.makeConstraints { m in
-          m.width.equalTo(v1.snp.height)
+        for p in Product.iPhones {
+          let cfg = DefaultProductViewConfiguration().configUI(with: p)
+          let v1 = iPhoneView(configuration: cfg)
+          v.addArrangedSubview(v1)
+          v1.kz.makeConstraints { m in
+            m.width.equalTo(v1.snp.height)
+          }
         }
       }
-    }
-    .kz.addToFlexView(flexViewY)
-    .kz.makeConstraints { m in
-      m.height.equalTo(view.snp.width).dividedBy(2.5)
-    }
+      .kz.addToFlexView(flexViewY)
+      .kz.makeConstraints { m in
+        m.height.equalTo(view.snp.width).dividedBy(2.5)
+      }
     
     title2L.kz.addToFlexView(flexViewY)
     

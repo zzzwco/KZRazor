@@ -30,6 +30,54 @@ import SnapKit
 
 open class KZFlexView: UIScrollView {
   
+  @discardableResult
+  func margins(_ length: CGFloat) -> Self {
+    self.margins = .init(top: length, left: length, bottom: length, right: length)
+    return self
+  }
+  
+  @discardableResult
+  func margins(_ insets: UIEdgeInsets) -> Self {
+    self.margins = insets
+    return self
+  }
+  
+  @discardableResult
+  func spacing(_ spacing: CGFloat) -> Self {
+    self.spacing = spacing
+    return self
+  }
+  
+  @discardableResult
+  func alignment(_ alignment: UIStackView.Alignment) -> Self {
+    self.alignment = alignment
+    return self
+  }
+  
+  @discardableResult
+  func distribution(_ distribution: UIStackView.Distribution) -> Self {
+    self.distribution = distribution
+    return self
+  }
+  
+  @discardableResult
+  func addArrangedSubview(_ view: UIView) -> Self {
+    self.stackView.addArrangedSubview(view)
+    return self
+  }
+  
+  @discardableResult
+  func addArrangedSubviews(_ views: [UIView]) -> Self {
+    views.forEach { stackView.addArrangedSubview($0) }
+    return self
+  }
+  
+  @discardableResult
+  func customSpacing(_ spacing: CGFloat, after view: UIView) -> Self {
+    self.stackView.setCustomSpacing(spacing, after: view)
+    return self
+  }
+  
   public var stackView = UIStackView()
   
   public var spacing: CGFloat {
@@ -53,18 +101,6 @@ open class KZFlexView: UIScrollView {
       stackView.isLayoutMarginsRelativeArrangement = true
       stackView.layoutMargins = newValue
     }
-  }
-  
-  public func addArrangedSubview(_ view: UIView) {
-    stackView.addArrangedSubview(view)
-  }
-  
-  public func addArrangedSubviews(_ views: [UIView]) {
-    views.forEach { stackView.addArrangedSubview($0) }
-  }
-  
-  public func setCustomSpacing(_ spacing: CGFloat, after view: UIView) {
-    stackView.setCustomSpacing(spacing, after: view)
   }
   
   /// Create an instance
@@ -95,55 +131,4 @@ open class KZFlexView: UIScrollView {
     }
   }
   
-}
-
-public extension KZWrapper where T: KZFlexView {
-  
-  @discardableResult
-  func margins(_ length: CGFloat) -> T {
-    base.margins = .init(top: length, left: length, bottom: length, right: length)
-    return base
-  }
-  
-  @discardableResult
-  func margins(_ insets: UIEdgeInsets) -> T {
-    base.margins = insets
-    return base
-  }
-  
-  @discardableResult
-  func spacing(_ spacing: CGFloat) -> T {
-    base.spacing = spacing
-    return base
-  }
-  
-  @discardableResult
-  func alignment(_ alignment: UIStackView.Alignment) -> T {
-    base.alignment = alignment
-    return base
-  }
-  
-  @discardableResult
-  func distribution(_ distribution: UIStackView.Distribution) -> T {
-    base.distribution = distribution
-    return base
-  }
-  
-  @discardableResult
-  func addArrangedSubview(_ view: UIView) -> T {
-    base.addArrangedSubview(view)
-    return base
-  }
-  
-  @discardableResult
-  func addArrangedSubviews(_ views: [UIView]) -> T {
-    base.addArrangedSubviews(views)
-    return base
-  }
-  
-  @discardableResult
-  func customSpacing(_ spacing: CGFloat, after view: UIView) -> T {
-    base.setCustomSpacing(spacing, after: view)
-    return base
-  }
 }
