@@ -7,6 +7,7 @@ target 'KZRazor' do
   pod 'SnapKit'
   pod 'QMUIKit'
   pod 'SwiftMessages'
+  pod 'PromiseKit'
 
  # Pods for KZRazor
 

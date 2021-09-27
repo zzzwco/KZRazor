@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1A16946013E41350156B37A1 /* Pods_KZRazor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F88F387CBD8EBDDF457848 /* Pods_KZRazor.framework */; };
 		32235DFC26F62E58002E06A8 /* KZButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32235DFB26F62E58002E06A8 /* KZButton.swift */; };
+		323AEE862701727C0042EB06 /* KZError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AEE852701727C0042EB06 /* KZError.swift */; };
+		323AEE88270199FA0042EB06 /* KZUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323AEE87270199FA0042EB06 /* KZUserDefaults.swift */; };
 		327D446226F58793006E0E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D446126F58793006E0E9E /* AppDelegate.swift */; };
 		327D446626F58793006E0E9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D446526F58793006E0E9E /* ViewController.swift */; };
 		327D446926F58793006E0E9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327D446726F58793006E0E9E /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		32235DFB26F62E58002E06A8 /* KZButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZButton.swift; sourceTree = "<group>"; };
+		323AEE852701727C0042EB06 /* KZError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZError.swift; sourceTree = "<group>"; };
+		323AEE87270199FA0042EB06 /* KZUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZUserDefaults.swift; sourceTree = "<group>"; };
 		327D445E26F58793006E0E9E /* KZRazor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KZRazor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		327D446126F58793006E0E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		327D446526F58793006E0E9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				32235DFB26F62E58002E06A8 /* KZButton.swift */,
 				3285783D26F738D800AFF3E9 /* KZControl.swift */,
 				327D447B26F58954006E0E9E /* KZFlexView.swift */,
+				323AEE852701727C0042EB06 /* KZError.swift */,
+				323AEE87270199FA0042EB06 /* KZUserDefaults.swift */,
 				32A26B3B27000B940023E9CE /* KZGridView.swift */,
 				3285785926FB5C5300AFF3E9 /* KZHud.swift */,
 				3285784126F7563000AFF3E9 /* KZImage.swift */,
@@ -315,11 +321,13 @@
 				327D448426F58954006E0E9E /* KZFlexView.swift in Sources */,
 				327D448226F58954006E0E9E /* KZView.swift in Sources */,
 				3285784E26FB1A2600AFF3E9 /* KZTips.swift in Sources */,
+				323AEE88270199FA0042EB06 /* KZUserDefaults.swift in Sources */,
 				3285785A26FB5C5300AFF3E9 /* KZHud.swift in Sources */,
 				327D446226F58793006E0E9E /* AppDelegate.swift in Sources */,
 				327D448526F58954006E0E9E /* UIFontEx.swift in Sources */,
 				327D449326F5D046006E0E9E /* Extensions.swift in Sources */,
 				3285785626FB1D8300AFF3E9 /* UIViewControllerEx.swift in Sources */,
+				323AEE862701727C0042EB06 /* KZError.swift in Sources */,
 				327D448626F58954006E0E9E /* KZPrint.swift in Sources */,
 				327D448026F58954006E0E9E /* NSObjectEx.swift in Sources */,
 				3285784A26FB0F0900AFF3E9 /* KZTextField.swift in Sources */,
