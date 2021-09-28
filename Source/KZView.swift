@@ -164,6 +164,23 @@ public extension KZWrapper where T: KZView {
   }
 }
 
+// MARK: - Layout
+
+public extension KZWrapper where T: KZView {
+  
+  @discardableResult
+  func setNeedsLayout() -> T {
+    base.setNeedsLayout()
+    return base
+  }
+  
+  @discardableResult
+  func layoutIfNeeded() -> T {
+    base.layoutIfNeeded()
+    return base
+  }
+}
+
 // MARK: - Auto Layout
 
 public extension KZWrapper where T: KZView {
