@@ -26,11 +26,10 @@
 //
 
 import Foundation
-import PromiseKit
 
 public enum KZError: Error {
   case server(_ msg: String)
-  case brokenPromise(_ msg: String)
+  case app(_ msg: String)
 }
 
 extension KZError: LocalizedError {
@@ -39,15 +38,8 @@ extension KZError: LocalizedError {
     switch self {
     case let .server(msg):
       return NSLocalizedString(msg, comment: "")
-    case let .brokenPromise(msg):
+    case let .app(msg):
       return NSLocalizedString(msg, comment: "")
     }
-  }
-}
-
-public func brokenPromise<T>(method: String = #function) -> Promise<T> {
-  return Promise<T>() { seal in
-    let err = KZError.brokenPromise("broken promise: \(method)")
-    seal.reject(err)
   }
 }

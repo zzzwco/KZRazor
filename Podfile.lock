@@ -1,13 +1,4 @@
 PODS:
-  - PromiseKit (6.15.3):
-    - PromiseKit/CorePromise (= 6.15.3)
-    - PromiseKit/Foundation (= 6.15.3)
-    - PromiseKit/UIKit (= 6.15.3)
-  - PromiseKit/CorePromise (6.15.3)
-  - PromiseKit/Foundation (6.15.3):
-    - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.15.3):
-    - PromiseKit/CorePromise
   - QMUIKit (4.3.0):
     - QMUIKit/QMUIComponents (= 4.3.0)
     - QMUIKit/QMUICore (= 4.3.0)
@@ -325,24 +316,21 @@ PODS:
   - SwiftMessages/App (9.0.4)
 
 DEPENDENCIES:
-  - PromiseKit
   - QMUIKit
   - SnapKit
   - SwiftMessages
 
 SPEC REPOS:
   trunk:
-    - PromiseKit
     - QMUIKit
     - SnapKit
     - SwiftMessages
 
 SPEC CHECKSUMS:
-  PromiseKit: 3b2b6995e51a954c46dbc550ce3da44fbfb563c5
   QMUIKit: 67888be9aa0ee0b12b8a219fcea2eec900afd841
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftMessages: 082ed63613a49fa8e749cd6000bb0a8b9bbc736f
 
-PODFILE CHECKSUM: 9b58c508a8ab8f8f581724d7157af51dd7782d29
+PODFILE CHECKSUM: 42388bbc3b8416873f83115352b786b6ee952b8d
 
 COCOAPODS: 1.11.0
