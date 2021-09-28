@@ -44,6 +44,7 @@
 		3285786C26FC176400AFF3E9 /* TmpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285786B26FC176400AFF3E9 /* TmpController.swift */; };
 		32A26B3C27000B940023E9CE /* KZGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A26B3B27000B940023E9CE /* KZGridView.swift */; };
 		32D8CCA52702ACF1004189DC /* KZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D8CCA42702ACF1004189DC /* KZStackView.swift */; };
+		32D8CCA72702C1DC004189DC /* KZError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D8CCA62702C1DC004189DC /* KZError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		3285786B26FC176400AFF3E9 /* TmpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpController.swift; sourceTree = "<group>"; };
 		32A26B3B27000B940023E9CE /* KZGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZGridView.swift; sourceTree = "<group>"; };
 		32D8CCA42702ACF1004189DC /* KZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZStackView.swift; sourceTree = "<group>"; };
+		32D8CCA62702C1DC004189DC /* KZError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZError.swift; sourceTree = "<group>"; };
 		8823FFAADD882A4DF4E98252 /* Pods-KZRazor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZRazor.release.xcconfig"; path = "Target Support Files/Pods-KZRazor/Pods-KZRazor.release.xcconfig"; sourceTree = "<group>"; };
 		B69DBD205A8840A1B993F4CB /* Pods-KZRazor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZRazor.debug.xcconfig"; path = "Target Support Files/Pods-KZRazor/Pods-KZRazor.debug.xcconfig"; sourceTree = "<group>"; };
 		C5F88F387CBD8EBDDF457848 /* Pods_KZRazor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KZRazor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +151,7 @@
 				3285784F26FB1A7B00AFF3E9 /* KZAlert.swift */,
 				32235DFB26F62E58002E06A8 /* KZButton.swift */,
 				3285783D26F738D800AFF3E9 /* KZControl.swift */,
+				32D8CCA62702C1DC004189DC /* KZError.swift */,
 				327D447B26F58954006E0E9E /* KZFlexView.swift */,
 				32A26B3B27000B940023E9CE /* KZGridView.swift */,
 				3285785926FB5C5300AFF3E9 /* KZHud.swift */,
@@ -324,6 +327,7 @@
 				323AEE88270199FA0042EB06 /* KZUserDefaults.swift in Sources */,
 				3285785A26FB5C5300AFF3E9 /* KZHud.swift in Sources */,
 				327D446226F58793006E0E9E /* AppDelegate.swift in Sources */,
+				32D8CCA72702C1DC004189DC /* KZError.swift in Sources */,
 				327D448526F58954006E0E9E /* UIFontEx.swift in Sources */,
 				327D449326F5D046006E0E9E /* Extensions.swift in Sources */,
 				3285785626FB1D8300AFF3E9 /* UIViewControllerEx.swift in Sources */,
@@ -398,6 +402,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -459,6 +464,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

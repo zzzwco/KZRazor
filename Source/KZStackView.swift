@@ -30,7 +30,7 @@ import UIKit
 
 public typealias KZStackView = UIStackView
 
-extension KZWrapper where T: KZStackView {
+public extension KZWrapper where T: KZStackView {
   
   @discardableResult
   func alignment(_ alignment: UIStackView.Alignment) -> T {
