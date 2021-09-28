@@ -69,6 +69,12 @@ public extension KZWrapper where T: KZButton {
     base.titleLabel?.numberOfLines = lines
     return base
   }
+  
+  @discardableResult
+  func image(name: String, for state: UIControl.State) -> T {
+    base.setImage(.kz.named(name), for: state)
+    return base
+  }
 }
 
 // MARK: - UIButton extension
@@ -96,6 +102,18 @@ public extension KZWrapper where T: UIButton {
   @discardableResult
   func padding(top: CGFloat, bottom: CGFloat, left: CGFloat, right: CGFloat) -> T {
     base.contentEdgeInsets = .init(top: top, left: left, bottom: bottom, right: right)
+    return base
+  }
+  
+  @discardableResult
+  func font(_ font: UIFont) -> T {
+    base.titleLabel?.font = font
+    return base
+  }
+  
+  @discardableResult
+  func tintColor(_ color: UIColor) -> T {
+    base.tintColor = color
     return base
   }
 }
