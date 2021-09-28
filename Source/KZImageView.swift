@@ -55,6 +55,22 @@ public extension KZWrapper where T == KZImageView {
   }
   
   @discardableResult
+  func named(_ name: String) -> T {
+    return UIImageView(image: .kz.named(name))
+  }
+  
+  @discardableResult
+  func uncachedNamed(_ name: String) -> T {
+    return UIImageView(image: .kz.uncached(name))
+  }
+  
+  @available(iOS 13.0, *)
+  @discardableResult
+  func systemName(_ name: String) -> T {
+    return UIImageView(image: .kz.systemName(name))
+  }
+  
+  @discardableResult
   func contentMode(_ contentMode: UIView.ContentMode) -> T {
     base.contentMode = contentMode
     return base
