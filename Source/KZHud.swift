@@ -51,13 +51,16 @@ public class KZHud {
   }
   
   /// Show View
-  public static func show<T: UIView>(view: T, height: CGFloat? = nil,
-                                     config: SwiftMessages.Config = viewConfig) {
-    let mv = MessageView()
-    mv.backgroundHeight = height
-    mv.installContentView(view)
-    SwiftMessages.show(config: config, view: mv)
-  }
+  public static func show<T: UIView>(
+    view: T, presentationStyle: SwiftMessages.PresentationStyle = .center,
+    height: CGFloat? = nil, config: SwiftMessages.Config = viewConfig) {
+      let mv = MessageView()
+      mv.backgroundHeight = height
+      mv.installContentView(view)
+      var cfg = config
+      cfg.presentationStyle = presentationStyle
+      SwiftMessages.show(config: cfg, view: mv)
+    }
   
   /// Show VC
   public static func show<T: UIViewController>(vc: T, source: T, height: CGFloat? = nil,

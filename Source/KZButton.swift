@@ -116,4 +116,10 @@ public extension KZWrapper where T: UIButton {
     base.tintColor = color
     return base
   }
+  
+  @discardableResult
+  func backgroundImage(name: String, for state: UIControl.State) -> T {
+    base.setBackgroundImage(.kz.named(name), for: state)
+    return base
+  }
 }
