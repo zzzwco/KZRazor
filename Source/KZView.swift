@@ -93,6 +93,7 @@ public extension KZWrapper where T: KZView {
   
   @discardableResult
   func cornerRadius(_ radius: CGFloat) -> T {
+    base.layer.masksToBounds = true
     base.layer.cornerRadius = radius
     return base
   }
