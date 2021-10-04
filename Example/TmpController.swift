@@ -33,13 +33,11 @@ class TmpController: UIViewController {
   override func viewDidLoad() {
     view.backgroundColor = .white
     
-    KZButton().kz.title("HELLO")
-      .kz.addTarget(self, action: #selector(action), for: .touchUpInside)
-      .kz.addToView(view)
-      .kz.makeConstraints { m in
-        m.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
-        m.centerX.equalToSuperview()
-      }
+  }
+  
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    
   }
   
   @objc func action() {
@@ -51,31 +49,3 @@ class TmpController: UIViewController {
   }
 }
 
-
-class TestView: UIView {
-  
-  let label = KZLabel()
-  let imgV = KZImageView()
-  
-  init() {
-    super.init(frame: .zero)
-    
-    label.kz.text("Hello")
-      .kz.textColor(.random)
-      .kz.addToView(self)
-    
-    imgV.kz.backgroundColor(.random)
-      .kz.addToView(self)
-  }
-  
-  required init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-  
-  override func layoutSubviews() {
-    super.layoutSubviews()
-    
-    label.frame = .init(x: 0, y: 0, width: bounds.size.width, height: 30)
-    imgV.frame = .init(x: 0, y: label.bounds.size.height, width: bounds.size.width, height: bounds.height - label.bounds.size.height)
-  }
-}

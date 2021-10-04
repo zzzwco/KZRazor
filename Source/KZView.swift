@@ -277,3 +277,13 @@ public extension KZWrapper where T: KZView {
     return base
   }
 }
+
+// MARK: - UIView Extension
+
+public extension UIView {
+  
+  var fitSize: CGSize {
+    self.sizeToFit()
+    return self.bounds.size
+  }
+}
