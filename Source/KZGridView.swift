@@ -91,9 +91,8 @@ open class KZGridView: UIView {
   /// Get content height.
   public var contentHeight: CGFloat {
     get {
-      let cnt = columnsCount - 1
-      let rows = (elementViews.count + cnt) / columnsCount
-      return padding.top + padding.bottom + ySpacing * CGFloat(cnt) + itemHeight * CGFloat(rows)
+      let rows = (elementViews.count + columnsCount - 1) / columnsCount
+      return padding.top + padding.bottom + ySpacing * CGFloat(rows - 1) + itemHeight * CGFloat(rows)
     }
   }
   
