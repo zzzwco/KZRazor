@@ -286,4 +286,12 @@ public extension UIView {
     self.sizeToFit()
     return self.bounds.size
   }
+  
+  func stacked(top: CGFloat, bottom: CGFloat, left: CGFloat, right: CGFloat) -> UIStackView {
+    let stack = UIStackView()
+    stack.isLayoutMarginsRelativeArrangement = true
+    stack.layoutMargins = .init(top: top, left: left, bottom: bottom, right: right)
+    stack.addArrangedSubview(self)
+    return stack
+  }
 }

@@ -65,12 +65,6 @@ public extension KZWrapper where T: KZButton {
   }
   
   @discardableResult
-  func numberOfLines(_ lines: Int) -> T {
-    base.titleLabel?.numberOfLines = lines
-    return base
-  }
-  
-  @discardableResult
   func image(name: String, for state: UIControl.State) -> T {
     base.setImage(.kz.named(name), for: state)
     return base
@@ -120,6 +114,12 @@ public extension KZWrapper where T: UIButton {
   @discardableResult
   func backgroundImage(name: String, for state: UIControl.State) -> T {
     base.setBackgroundImage(.kz.named(name), for: state)
+    return base
+  }
+  
+  @discardableResult
+  func numberOfLines(_ lines: Int) -> T {
+    base.titleLabel?.numberOfLines = lines
     return base
   }
 }

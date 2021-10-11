@@ -93,4 +93,10 @@ public extension KZWrapper where T: UITextField {
     base.textAlignment = alignment
     return base
   }
+  
+  @discardableResult
+  func text(_ text: String?) -> T {
+    base.text = text
+    return base
+  }
 }
