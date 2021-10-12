@@ -61,8 +61,11 @@ open class KZFlexView: UIScrollView {
   }
   
   @discardableResult
-  public func addArrangedSubview(_ view: UIView) -> Self {
+  public func addArrangedSubview(_ view: UIView, customSpacing: CGFloat? = nil) -> Self {
     self.stackView.addArrangedSubview(view)
+    if customSpacing != nil {
+      self.customSpacing(customSpacing!, after: view)
+    }
     return self
   }
   

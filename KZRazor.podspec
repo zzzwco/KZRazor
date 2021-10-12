@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "KZRazor"
-  spec.version      = "0.0.20"
+  spec.version      = "0.0.21"
   spec.summary      = "A tool kit"
 
 
