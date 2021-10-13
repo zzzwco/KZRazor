@@ -260,6 +260,12 @@ public extension KZWrapper where T: KZView {
   }
   
   @discardableResult
+  func insertSubview(_ view: UIView, at index: Int) -> T {
+    base.insertSubview(view, at: index)
+    return base
+  }
+  
+  @discardableResult
   func makeConstraints(_ closure: (_ make: ConstraintMaker) -> Void) -> T {
     base.snp.makeConstraints(closure)
     return base

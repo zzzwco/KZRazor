@@ -81,6 +81,15 @@ public extension KZWrapper where T: KZStackView {
   }
   
   @discardableResult
+  func addArrangedSubview(_ view: UIView, customSpacing: CGFloat? = nil) -> T {
+    base.addArrangedSubview(view)
+    if customSpacing != nil {
+      base.setCustomSpacing(customSpacing!, after: view)
+    }
+    return base
+  }
+  
+  @discardableResult
   func addArrangedSubviews(_ views: [UIView]) -> T {
     views.forEach { base.addArrangedSubview($0) }
     return base
