@@ -90,6 +90,12 @@ public extension KZWrapper where T: KZStackView {
   }
   
   @discardableResult
+  func layoutMargins(_ layoutMargins: UIEdgeInsets) -> T {
+    base.layoutMargins = layoutMargins
+    return base
+  }
+  
+  @discardableResult
   func addArrangedSubviews(_ views: [UIView]) -> T {
     views.forEach { base.addArrangedSubview($0) }
     return base
