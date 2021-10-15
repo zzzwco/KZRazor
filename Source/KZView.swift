@@ -204,26 +204,6 @@ public extension KZWrapper where T: KZView {
   
 }
 
-// MARK: - Configuring Content Margins
-
-public extension KZWrapper where T: KZView {
-  
-  @discardableResult
-  func padding(_ length: CGFloat, ignoreSafeArea: Bool = false) -> T {
-    base.insetsLayoutMarginsFromSafeArea = !ignoreSafeArea
-    base.directionalLayoutMargins =
-      .init(top: length, leading: length, bottom: length, trailing: length)
-    return base
-  }
-  
-  @discardableResult
-  func padding(_ insets: NSDirectionalEdgeInsets, ignoreSafeArea: Bool = false) -> T {
-    base.insetsLayoutMarginsFromSafeArea = !ignoreSafeArea
-    base.directionalLayoutMargins = insets
-    return base
-  }
-}
-
 // MARK: - Event-Related Behavior
 
 public extension KZWrapper where T: KZView {
