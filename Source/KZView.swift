@@ -329,6 +329,12 @@ public extension KZWrapper where T: KZView {
   }
   
   @discardableResult
+  func addToStackView(_ stackView: KZFlexView) -> T {
+    stackView.addArrangedSubviews(base)
+    return base
+  }
+  
+  @discardableResult
   func makeConstraints(_ closure: (_ make: ConstraintMaker) -> Void) -> T {
     base.snp.makeConstraints(closure)
     return base
