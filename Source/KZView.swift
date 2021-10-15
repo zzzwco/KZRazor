@@ -154,6 +154,13 @@ public extension KZWrapper where T: KZView {
   }
   
   @discardableResult
+  func addSubview(_ view: UIView, constraints: (_ make: ConstraintMaker) -> Void) -> T {
+    base.addSubview(view)
+    view.snp.makeConstraints(constraints)
+    return base
+  }
+  
+  @discardableResult
   func bringSubviewToFront(_ view: UIView) -> T {
     base.bringSubviewToFront(view)
     return base
