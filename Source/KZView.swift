@@ -143,9 +143,84 @@ public extension KZWrapper where T: KZView {
   }
 }
 
+// MARK: - Hierarchy
+
+public extension KZWrapper where T: KZView {
+  
+  @discardableResult
+  func addSubview(_ view: UIView) -> T {
+    base.addSubview(view)
+    return base
+  }
+  
+  @discardableResult
+  func bringSubviewToFront(_ view: UIView) -> T {
+    base.bringSubviewToFront(view)
+    return base
+  }
+  
+  @discardableResult
+  func sendSubviewToBack(_ view: UIView) -> T {
+    base.sendSubviewToBack(view)
+    return base
+  }
+  
+  @discardableResult
+  func removeFromSuperview() -> T {
+    base.removeFromSuperview()
+    return base
+  }
+  
+  @discardableResult
+  func insertSubview(_ view: UIView, at index: Int) -> T {
+    base.insertSubview(view, at: index)
+    return base
+  }
+  
+  @discardableResult
+  func insertSubview(_ view: UIView, aboveSubview siblingSubview: UIView) -> T {
+    base.insertSubview(view, aboveSubview: siblingSubview)
+    return base
+  }
+  
+  @discardableResult
+  func insertSubview(_ view: UIView, belowSubview siblingSubview: UIView) -> T {
+    base.insertSubview(view, belowSubview: siblingSubview)
+    return base
+  }
+  
+  @discardableResult
+  func exchangeSubview(at index1: Int, withSubviewAt index2: Int) -> T {
+    base.exchangeSubview(at: index1, withSubviewAt: index2)
+    return base
+  }
+  
+}
+
+// MARK: - Configuring Content Margins
+
+public extension KZWrapper where T: KZView {
+  
+  @discardableResult
+  func padding(_ length: CGFloat, ignoreSafeArea: Bool = false) -> T {
+    base.insetsLayoutMarginsFromSafeArea = !ignoreSafeArea
+    base.directionalLayoutMargins =
+      .init(top: length, leading: length, bottom: length, trailing: length)
+    return base
+  }
+  
+  @discardableResult
+  func padding(_ insets: NSDirectionalEdgeInsets, ignoreSafeArea: Bool = false) -> T {
+    base.insetsLayoutMarginsFromSafeArea = !ignoreSafeArea
+    base.directionalLayoutMargins = insets
+    return base
+  }
+}
+
 // MARK: - Event-Related Behavior
 
 public extension KZWrapper where T: KZView {
+  
   @discardableResult
   func isUserInteractionEnabled(_ isUserInteractionEnabled: Bool) -> T {
     base.isUserInteractionEnabled = isUserInteractionEnabled
@@ -180,6 +255,13 @@ public extension KZWrapper where T: KZView {
     base.layoutIfNeeded()
     return base
   }
+  
+  @discardableResult
+  func useAutoLayout() -> T {
+    base.translatesAutoresizingMaskIntoConstraints = false
+    return base
+  }
+  
 }
 
 // MARK: - Auto Layout
@@ -256,12 +338,6 @@ public extension KZWrapper where T: KZView {
   @discardableResult
   func addToFlexView(_ flexView: KZFlexView) -> T {
     flexView.addArrangedSubview(base)
-    return base
-  }
-  
-  @discardableResult
-  func insertSubview(_ view: UIView, at index: Int) -> T {
-    base.insertSubview(view, at: index)
     return base
   }
   

@@ -42,6 +42,7 @@
 		3285785626FB1D8300AFF3E9 /* UIViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285785526FB1D8300AFF3E9 /* UIViewControllerEx.swift */; };
 		3285785A26FB5C5300AFF3E9 /* KZHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285785926FB5C5300AFF3E9 /* KZHud.swift */; };
 		3285786C26FC176400AFF3E9 /* TmpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285786B26FC176400AFF3E9 /* TmpController.swift */; };
+		3299A3A92719180D00AA9CD2 /* UIColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3299A3A82719180D00AA9CD2 /* UIColorEx.swift */; };
 		32A26B3C27000B940023E9CE /* KZGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A26B3B27000B940023E9CE /* KZGridView.swift */; };
 		32B630092706B8FC00817F56 /* KZShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B630082706B8FC00817F56 /* KZShapeView.swift */; };
 		32D8CCA52702ACF1004189DC /* KZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D8CCA42702ACF1004189DC /* KZStackView.swift */; };
@@ -86,6 +87,7 @@
 		3285785526FB1D8300AFF3E9 /* UIViewControllerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerEx.swift; sourceTree = "<group>"; };
 		3285785926FB5C5300AFF3E9 /* KZHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZHud.swift; sourceTree = "<group>"; };
 		3285786B26FC176400AFF3E9 /* TmpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpController.swift; sourceTree = "<group>"; };
+		3299A3A82719180D00AA9CD2 /* UIColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorEx.swift; sourceTree = "<group>"; };
 		32A26B3B27000B940023E9CE /* KZGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZGridView.swift; sourceTree = "<group>"; };
 		32B630082706B8FC00817F56 /* KZShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZShapeView.swift; sourceTree = "<group>"; };
 		32D8CCA42702ACF1004189DC /* KZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZStackView.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				327D447C26F58954006E0E9E /* UIFontEx.swift */,
 				3285785126FB1B0800AFF3E9 /* UIScreenEx.swift */,
 				3285785526FB1D8300AFF3E9 /* UIViewControllerEx.swift */,
+				3299A3A82719180D00AA9CD2 /* UIColorEx.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				3285785026FB1A7B00AFF3E9 /* KZAlert.swift in Sources */,
 				32A26B3C27000B940023E9CE /* KZGridView.swift in Sources */,
 				327D448326F58954006E0E9E /* CGFloatEx.swift in Sources */,
+				3299A3A92719180D00AA9CD2 /* UIColorEx.swift in Sources */,
 				32D8CCA52702ACF1004189DC /* KZStackView.swift in Sources */,
 				32235DFC26F62E58002E06A8 /* KZButton.swift in Sources */,
 			);

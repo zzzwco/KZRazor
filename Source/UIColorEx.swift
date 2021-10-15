@@ -1,8 +1,8 @@
 //
-//  TmpController.swift
+//  UIColorEx.swift
 //  KZRazor
 //
-//  Created by zzzwco on 2021/9/23.
+//  Created by zzzwco on 2021/10/15.
 //
 //  Copyright (c) 2021 zzzwco <zzzwco@outlook.com>
 //
@@ -28,23 +28,9 @@
 import Foundation
 import UIKit
 
-class TmpController: UIViewController {
+public extension UIColor {
   
-  override func viewDidLoad() {
-    view.backgroundColor = .white
-  }
-  
-  override func viewDidLayoutSubviews() {
-    super.viewDidLayoutSubviews()
-    
-  }
-  
-  @objc func action() {
-    
-  }
-  
-  deinit {
-    KZPrint.log(message: self)
+  func alpha(_ alpha: CGFloat) -> UIColor {
+    UIColor(red: self.qmui_red, green: self.qmui_green, blue: self.qmui_blue, alpha: alpha)
   }
 }
-
