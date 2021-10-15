@@ -63,6 +63,20 @@ public extension KZWrapper where T: KZStackView {
   }
   
   @discardableResult
+  func margins(_ length: CGFloat) -> T {
+    base.isLayoutMarginsRelativeArrangement = true
+    base.layoutMargins = .init(top: length, left: length, bottom: length, right: length)
+    return base
+  }
+  
+  @discardableResult
+  func margins(_ insets: UIEdgeInsets) -> T {
+    base.isLayoutMarginsRelativeArrangement = true
+    base.layoutMargins = insets
+    return base
+  }
+  
+  @discardableResult
   func spacing(_ spacing: CGFloat) -> T {
     base.spacing = spacing
     return base

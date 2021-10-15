@@ -330,7 +330,7 @@ public extension KZWrapper where T: KZView {
   
   @discardableResult
   func addToStackView(_ stackView: KZFlexView) -> T {
-    stackView.addArrangedSubviews(base)
+    stackView.addArrangedSubview(base)
     return base
   }
   
