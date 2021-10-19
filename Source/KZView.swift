@@ -329,9 +329,11 @@ public extension KZWrapper where T: KZView {
   }
   
   @discardableResult
-  func addToStackView(_ stackView: UIStackView, customSpacing: CGFloat = 0) -> T {
+  func addToStackView(_ stackView: UIStackView, customSpacing: CGFloat? = nil) -> T {
     stackView.addArrangedSubview(base)
-    stackView.setCustomSpacing(customSpacing, after: base)
+    if customSpacing != nil {
+      stackView.setCustomSpacing(customSpacing!, after: base)
+    }
     return base
   }
   
