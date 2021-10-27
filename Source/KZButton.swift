@@ -87,8 +87,15 @@ public extension KZWrapper where T: UIButton {
     return base
   }
   
+  @discardableResult
   func titleAlignment(_ alignment: NSTextAlignment) -> T {
     base.titleLabel?.textAlignment = alignment
+    return base
+  }
+  
+  @discardableResult
+  func lineBreakMode(_ mode: NSLineBreakMode) -> T {
+    base.titleLabel?.lineBreakMode = mode
     return base
   }
   
