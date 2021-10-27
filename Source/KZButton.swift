@@ -76,7 +76,7 @@ public extension KZWrapper where T: KZButton {
 public extension KZWrapper where T: UIButton {
   
   @discardableResult
-  func title(_ title: String, for state: UIControl.State = .normal) -> T {
+  func title(_ title: String?, for state: UIControl.State = .normal) -> T {
     base.setTitle(title, for: state)
     return base
   }
@@ -84,6 +84,11 @@ public extension KZWrapper where T: UIButton {
   @discardableResult
   func titleColor(_ titleColor: UIColor?, for state: UIControl.State = .normal) -> T {
     base.setTitleColor(titleColor, for: state)
+    return base
+  }
+  
+  func titleAlignment(_ alignment: NSTextAlignment) -> T {
+    base.titleLabel?.textAlignment = alignment
     return base
   }
   
