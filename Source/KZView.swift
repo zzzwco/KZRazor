@@ -303,6 +303,7 @@ public extension KZWrapper where T: KZView {
 
 public extension KZWrapper where T: KZView {
   
+  @discardableResult
   func tag(_ tag: Int) -> T {
     base.tag = tag
     return base

@@ -133,11 +133,11 @@ open class KZShapeView: UIView {
         roundedRect: bounds.inset(by: insets ?? .zero),
         byRoundingCorners: byRoundingCorners, cornerRadii: cornerRadii)
     case .capsule(_, _, _, let insets):
-      path = UIBezierPath(
-        roundedRect: bounds.inset(by: insets ?? .zero), byRoundingCorners: .allCorners,
-        cornerRadii: .init(
-          width: (bounds.height - (insets?.top ?? 0) - (insets?.bottom ?? 0) * 0.5),
-          height: (bounds.height - (insets?.top ?? 0) - (insets?.bottom ?? 0) * 0.5)))
+      let rect = bounds.inset(by: insets ?? .zero)
+      let w = bounds.height - (insets?.top ?? 0) - (insets?.bottom ?? 0) * 0.5
+      let h = bounds.height - (insets?.top ?? 0) - (insets?.bottom ?? 0) * 0.5
+      let radii = CGSize(width: w, height: h)
+      path = UIBezierPath(roundedRect: rect, byRoundingCorners: .allCorners, cornerRadii: radii)
     case .circle(_, _, _, let insets):
       KZPrint.log(message: bounds.inset(by: insets ?? .zero).width, bounds.inset(by: insets ?? .zero).height)
       path = UIBezierPath(

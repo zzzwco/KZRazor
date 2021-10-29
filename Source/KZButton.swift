@@ -66,7 +66,7 @@ public extension KZWrapper where T: KZButton {
   
   @discardableResult
   func image(name: String, for state: UIControl.State) -> T {
-    base.setImage(.kz.named(name), for: state)
+    base.setImage(UIImage.kz.named(name), for: state)
     return base
   }
 }
@@ -125,7 +125,7 @@ public extension KZWrapper where T: UIButton {
   
   @discardableResult
   func backgroundImage(name: String, for state: UIControl.State) -> T {
-    base.setBackgroundImage(.kz.named(name), for: state)
+    base.setBackgroundImage(UIImage.kz.named(name), for: state)
     return base
   }
   
