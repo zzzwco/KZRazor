@@ -140,4 +140,14 @@ public extension KZWrapper where T: KZStackView {
     base.removeArrangedSubview(view)
     return base
   }
+  
+  @discardableResult
+  func removeAllArrangedSubviews() -> T {
+    base.arrangedSubviews.forEach {
+      base.removeArrangedSubview($0)
+      NSLayoutConstraint.deactivate($0.constraints)
+      $0.removeFromSuperview()
+    }
+    return base
+  }
 }
