@@ -95,6 +95,13 @@ public extension KZWrapper where T: KZStackView {
   }
   
   @discardableResult
+  func addArrangedSubview(_ view: UIView, constraints: (_ make: ConstraintMaker) -> Void) -> T {
+    base.addArrangedSubview(view)
+    view.snp.makeConstraints(constraints)
+    return base
+  }
+  
+  @discardableResult
   func addArrangedSubview(_ view: UIView, customSpacing: CGFloat? = nil) -> T {
     base.addArrangedSubview(view)
     if customSpacing != nil {

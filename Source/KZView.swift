@@ -324,17 +324,50 @@ public extension KZWrapper where T: KZView {
   }
   
   @discardableResult
+  func addToView(_ view: UIView, constraints: (_ make: ConstraintMaker) -> Void) -> T {
+    view.addSubview(base)
+    view.snp.makeConstraints(constraints)
+    return base
+  }
+  
+  @discardableResult
   func addToFlexView(_ flexView: KZFlexView) -> T {
     flexView.addArrangedSubview(base)
     return base
   }
   
   @discardableResult
-  func addToStackView(_ stackView: UIStackView, customSpacing: CGFloat? = nil) -> T {
+  func addToFlexView(_ flexView: KZFlexView, constraints: (_ make: ConstraintMaker) -> Void) -> T {
+    flexView.addArrangedSubview(base)
+    base.snp.makeConstraints(constraints)
+    return base
+  }
+  
+  @discardableResult
+  func addToStackView(_ stackView: UIStackView) -> T {
     stackView.addArrangedSubview(base)
-    if customSpacing != nil {
-      stackView.setCustomSpacing(customSpacing!, after: base)
-    }
+    return base
+  }
+  
+  @discardableResult
+  func addToStackView(_ stackView: UIStackView, constraints: (_ make: ConstraintMaker) -> Void) -> T {
+    stackView.addArrangedSubview(base)
+    base.snp.makeConstraints(constraints)
+    return base
+  }
+  
+  @discardableResult
+  func addToStackView(_ stackView: UIStackView, customSpacing: CGFloat) -> T {
+    stackView.addArrangedSubview(base)
+    stackView.setCustomSpacing(customSpacing, after: base)
+    return base
+  }
+  
+  @discardableResult
+  func addToStackView(_ stackView: UIStackView, customSpacing: CGFloat, constraints: (_ make: ConstraintMaker) -> Void) -> T {
+    stackView.addArrangedSubview(base)
+    stackView.setCustomSpacing(customSpacing, after: base)
+    base.snp.makeConstraints(constraints)
     return base
   }
   
