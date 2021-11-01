@@ -102,20 +102,20 @@ public extension KZWrapper where T: KZStackView {
     return base
   }
   
-//  @discardableResult
-//  func addArrangedSubview(_ view: UIView, constraints: (_ make: ConstraintMaker) -> Void) -> T {
-//    base.addArrangedSubview(view)
-//    view.snp.makeConstraints(constraints)
-//    return base
-//  }
-//
-//  @discardableResult
-//  func addArrangedSubview(_ view: UIView, customSpacing: CGFloat, constraints: (_ make: ConstraintMaker) -> Void) -> T {
-//    base.addArrangedSubview(view)
-//    base.setCustomSpacing(customSpacing, after: view)
-//    view.snp.makeConstraints(constraints)
-//    return base
-//  }
+  @discardableResult
+  func addArrangedSubview(_ view: UIView, constraints: (_ make: ConstraintMaker) -> Void) -> T {
+    base.addArrangedSubview(view)
+    view.snp.makeConstraints(constraints)
+    return base
+  }
+
+  @discardableResult
+  func addArrangedSubview(_ view: UIView, customSpacing: CGFloat, constraints: (_ make: ConstraintMaker) -> Void) -> T {
+    base.addArrangedSubview(view)
+    base.setCustomSpacing(customSpacing, after: view)
+    view.snp.makeConstraints(constraints)
+    return base
+  }
   
   @discardableResult
   func layoutMargins(_ layoutMargins: UIEdgeInsets) -> T {
