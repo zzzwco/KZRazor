@@ -27,6 +27,7 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 public typealias KZStackView = UIStackView
 
@@ -102,11 +103,17 @@ public extension KZWrapper where T: KZStackView {
   }
   
   @discardableResult
-  func addArrangedSubview(_ view: UIView, customSpacing: CGFloat? = nil) -> T {
+  func addArrangedSubview(_ view: UIView, customSpacing: CGFloat) -> T {
     base.addArrangedSubview(view)
-    if customSpacing != nil {
-      base.setCustomSpacing(customSpacing!, after: view)
-    }
+    base.setCustomSpacing(customSpacing, after: view)
+    return base
+  }
+  
+  @discardableResult
+  func addArrangedSubview(_ view: UIView, customSpacing: CGFloat, constraints: (_ make: ConstraintMaker) -> Void) -> T {
+    base.addArrangedSubview(view)
+    base.setCustomSpacing(customSpacing, after: view)
+    view.snp.makeConstraints(constraints)
     return base
   }
   
