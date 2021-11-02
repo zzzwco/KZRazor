@@ -32,6 +32,7 @@ class TmpController: UIViewController {
   
   override func viewDidLoad() {
     view.backgroundColor = .white
+    
   }
   
   override func viewDidLayoutSubviews() {

@@ -326,7 +326,7 @@ public extension KZWrapper where T: KZView {
   @discardableResult
   func addToView(_ view: UIView, constraints: (_ make: ConstraintMaker) -> Void) -> T {
     view.addSubview(base)
-    view.snp.makeConstraints(constraints)
+    base.snp.makeConstraints(constraints)
     return base
   }
   
