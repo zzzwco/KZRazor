@@ -24,10 +24,7 @@
 		327D448526F58954006E0E9E /* UIFontEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D447C26F58954006E0E9E /* UIFontEx.swift */; };
 		327D448626F58954006E0E9E /* KZPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D447D26F58954006E0E9E /* KZPrint.swift */; };
 		327D448726F58954006E0E9E /* DelegateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D447E26F58954006E0E9E /* DelegateHelper.swift */; };
-		327D448C26F58B1C006E0E9E /* ProductViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D448826F58B1C006E0E9E /* ProductViewConfiguration.swift */; };
-		327D448D26F58B1C006E0E9E /* iPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D448926F58B1C006E0E9E /* iPhoneView.swift */; };
-		327D448E26F58B1C006E0E9E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D448A26F58B1C006E0E9E /* Product.swift */; };
-		327D448F26F58B1C006E0E9E /* MacView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D448B26F58B1C006E0E9E /* MacView.swift */; };
+		327D448C26F58B1C006E0E9E /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D448826F58B1C006E0E9E /* ProductView.swift */; };
 		327D449326F5D046006E0E9E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D449226F5D046006E0E9E /* Extensions.swift */; };
 		3285783E26F738D800AFF3E9 /* KZControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285783D26F738D800AFF3E9 /* KZControl.swift */; };
 		3285784026F755AE00AFF3E9 /* KZImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285783F26F755AE00AFF3E9 /* KZImageView.swift */; };
@@ -69,10 +66,7 @@
 		327D447C26F58954006E0E9E /* UIFontEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontEx.swift; sourceTree = "<group>"; };
 		327D447D26F58954006E0E9E /* KZPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZPrint.swift; sourceTree = "<group>"; };
 		327D447E26F58954006E0E9E /* DelegateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateHelper.swift; sourceTree = "<group>"; };
-		327D448826F58B1C006E0E9E /* ProductViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewConfiguration.swift; sourceTree = "<group>"; };
-		327D448926F58B1C006E0E9E /* iPhoneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPhoneView.swift; sourceTree = "<group>"; };
-		327D448A26F58B1C006E0E9E /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		327D448B26F58B1C006E0E9E /* MacView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacView.swift; sourceTree = "<group>"; };
+		327D448826F58B1C006E0E9E /* ProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		327D449226F5D046006E0E9E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3285783D26F738D800AFF3E9 /* KZControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZControl.swift; sourceTree = "<group>"; };
 		3285783F26F755AE00AFF3E9 /* KZImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZImageView.swift; sourceTree = "<group>"; };
@@ -132,11 +126,8 @@
 		327D446026F58793006E0E9E /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				327D448926F58B1C006E0E9E /* iPhoneView.swift */,
-				327D448B26F58B1C006E0E9E /* MacView.swift */,
-				327D448A26F58B1C006E0E9E /* Product.swift */,
-				327D448826F58B1C006E0E9E /* ProductViewConfiguration.swift */,
 				327D446126F58793006E0E9E /* AppDelegate.swift */,
+				327D448826F58B1C006E0E9E /* ProductView.swift */,
 				327D446526F58793006E0E9E /* ViewController.swift */,
 				3285786B26FC176400AFF3E9 /* TmpController.swift */,
 				327D449226F5D046006E0E9E /* Extensions.swift */,
@@ -322,14 +313,11 @@
 				3285786C26FC176400AFF3E9 /* TmpController.swift in Sources */,
 				3285785426FB1C6100AFF3E9 /* UIApplicationEx.swift in Sources */,
 				327D447F26F58954006E0E9E /* Reflectable.swift in Sources */,
-				327D448E26F58B1C006E0E9E /* Product.swift in Sources */,
 				327D448126F58954006E0E9E /* KZ.swift in Sources */,
 				3285784426F8E5C600AFF3E9 /* KZLabel.swift in Sources */,
 				32D8CCB027033AA9004189DC /* KZScrollView.swift in Sources */,
-				327D448F26F58B1C006E0E9E /* MacView.swift in Sources */,
 				3285783E26F738D800AFF3E9 /* KZControl.swift in Sources */,
-				327D448D26F58B1C006E0E9E /* iPhoneView.swift in Sources */,
-				327D448C26F58B1C006E0E9E /* ProductViewConfiguration.swift in Sources */,
+				327D448C26F58B1C006E0E9E /* ProductView.swift in Sources */,
 				3285785226FB1B0800AFF3E9 /* UIScreenEx.swift in Sources */,
 				3285784226F7563000AFF3E9 /* KZImage.swift in Sources */,
 				327D448426F58954006E0E9E /* KZFlexView.swift in Sources */,

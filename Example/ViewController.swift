@@ -10,7 +10,7 @@ import SwiftMessages
 
 class ViewController: UIViewController {
   
-  private let flexViewY = KZFlexView(axis: .vertical)
+  private let container = KZFlexView(axis: .vertical)
   private let title1L = titleLClousure("iPhone、iPad")
   private let title2L = titleLClousure("Mac")
   private let iphonesView = KZFlexView(axis: .horizontal)
@@ -27,54 +27,52 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     title = "Apple Store"
     view.backgroundColor = .white
+    
     navigationItem.rightBarButtonItem = UIBarButtonItem(
       barButtonSystemItem: .refresh, target: self, action: #selector(refresh))
     navigationItem.leftBarButtonItem = UIBarButtonItem(
       barButtonSystemItem: .play, target: self, action: #selector(tmp))
     
-    flexViewY.margins(.init(top: 20, left: 20, bottom: 20, right: 20))
-      .spacing(2)
-      .kz.addToView(view)
-      .kz.makeConstraints { m in
-        m.edges.equalToSuperview()
-      }
+    container.margins(.init(top: 20, left: 20, bottom: 20, right: 20)).spacing(20)
+      .kz.addToView(view, constraints: { make in
+        make.edges.equalToSuperview()
+      })
       .addArrangedSubview(title1L)
+      .addArrangedSubview(iphonesView, constraints: { make in
+        make.height.equalTo(view.snp.width).dividedBy(2.5)
+      })
+      .addArrangedSubview(title2L)
+      .addArrangedSubviews(Product.macs.map { ProductView(.mac).refreshUI(with: $0) })
     
     iphonesView.spacing(15)
       .kz.with { v in
         v.showsHorizontalScrollIndicator = false
         v.layer.masksToBounds = false
-      
+        
         for p in Product.iPhones {
-          let cfg = DefaultProductViewConfiguration().configUI(with: p)
-          let v1 = iPhoneView(configuration: cfg)
-          v.addArrangedSubview(v1)
-          v1.kz.makeConstraints { m in
-            m.width.equalTo(v1.snp.height)
+          let iPhoneView = ProductView(.iPhone).refreshUI(with: p)
+          v.addArrangedSubview(iPhoneView)
+          iPhoneView.kz.makeConstraints { make in
+            make.width.equalTo(iPhoneView.snp.height)
           }
         }
       }
-      .kz.addToFlexView(flexViewY)
-      .kz.makeConstraints { m in
-        m.height.equalTo(view.snp.width).dividedBy(2.5)
-      }
-    
-    title2L.kz.addToFlexView(flexViewY)
-    
-    for p in Product.macs {
-      let cfg = DefaultProductViewConfiguration().configUI(with: p)
-      let v = MacView(configuration: cfg)
-      v.kz.addToFlexView(flexViewY)
-    }
   }
-  
+}
 
+// MARK: - Events
+
+private extension ViewController {
+  
   @objc func refresh() {
-    isiPhonesViewHidden = !isiPhonesViewHidden
-    title1L.isHidden = isiPhonesViewHidden
-    iphonesView.isHidden = isiPhonesViewHidden
+    UIView.animate(withDuration: 0.25) {
+      self.isiPhonesViewHidden = !self.isiPhonesViewHidden
+      self.title1L.isHidden = self.isiPhonesViewHidden
+      self.iphonesView.isHidden = self.isiPhonesViewHidden
+    }
   }
   
   @objc func tmp() {
