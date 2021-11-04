@@ -68,8 +68,8 @@ class ViewController: UIViewController {
 private extension ViewController {
   
   @objc func refresh() {
+    self.isiPhonesViewHidden = !self.isiPhonesViewHidden
     UIView.animate(withDuration: 0.25) {
-      self.isiPhonesViewHidden = !self.isiPhonesViewHidden
       self.title1L.isHidden = self.isiPhonesViewHidden
       self.iphonesView.isHidden = self.isiPhonesViewHidden
     }
