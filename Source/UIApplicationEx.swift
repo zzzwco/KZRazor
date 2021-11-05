@@ -58,6 +58,8 @@ public extension UIApplication {
     return rootViewController?.navigationController
   }
   
+  static var topViewController: UIViewController? { navigationController?.topViewController }
+  
   static func dismissKeyboard() {
     UIApplication.shared.sendAction(#selector(UIApplication.resignFirstResponder), to: nil, from: nil, for: nil)
   }
