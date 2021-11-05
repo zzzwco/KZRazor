@@ -54,7 +54,12 @@ public extension UIApplication {
   static var rootViewController: UIViewController? { lastWindow.rootViewController }
   
   static var navigationController: UINavigationController? {
-    if rootViewController is UINavigationController { return (rootViewController as? UINavigationController) }
+    if rootViewController is UINavigationController {
+      return (rootViewController as? UINavigationController)
+    }
+    if rootViewController is UITabBarController {
+      return (rootViewController as? UITabBarController)?.selectedViewController?.navigationController
+    }
     return rootViewController?.navigationController
   }
   
