@@ -58,7 +58,11 @@ public extension UIApplication {
       return (rootViewController as? UINavigationController)
     }
     if rootViewController is UITabBarController {
-      return (rootViewController as? UITabBarController)?.selectedViewController?.navigationController
+      let vc = (rootViewController as? UITabBarController)?.selectedViewController
+      if vc is UINavigationController {
+        return (vc as? UINavigationController)
+      }
+      return vc?.navigationController
     }
     return rootViewController?.navigationController
   }
