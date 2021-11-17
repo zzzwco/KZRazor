@@ -86,7 +86,8 @@ class ProductView: UIView {
   
   override func layoutSubviews() {
     super.layoutSubviews()
-    showShadow()
+    self.kz.cornerRadius(15)
+      .kz.shadow(radius: 10, opacity: 0.1, color: .black, offset: .zero)
   }
 }
 

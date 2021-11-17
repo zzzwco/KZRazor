@@ -28,18 +28,6 @@
 import Foundation
 import UIKit
 
-extension UIView {
-  
-  func showShadow() {
-    layer.cornerRadius = 15
-    layer.shadowColor = UIColor.black.cgColor
-    layer.shadowOffset = .zero
-    layer.shadowRadius = 10
-    layer.shadowOpacity = 0.1
-    layer.masksToBounds = false
-  }
-}
-
 extension UIColor {
   
   static var random: UIColor {
