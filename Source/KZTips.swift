@@ -42,7 +42,7 @@ public class KZTips {
   
   @discardableResult
   public static func showText(
-    withText: String?, in view: UIView, isUserInteractionEnabled: Bool = true,
+    _ withText: String?, in view: UIView, isUserInteractionEnabled: Bool = true,
     detailText: String? = nil, hideAfterDelay: TimeInterval = 1.5
   ) -> QMUITips {
     let tips = QMUITips.show(
