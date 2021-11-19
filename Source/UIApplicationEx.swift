@@ -28,20 +28,31 @@
 import Foundation
 import UIKit
 
-public extension UIApplication {
-  
-  static var appVersion: String? {
-    return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
-  }
-  
-  static var appBuildVersion: String? {
-    return Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String
-  }
+public typealias KZApp = UIApplication
+
+public extension KZApp {
   
   static var displayName: String? {
     return Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String
   }
   
+  @available(*, deprecated, renamed: "version")
+  static var appVersion: String? {
+    return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+  }
+  static var version: String? {
+    return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+  }
+  
+  @available(*, deprecated, renamed: "buildVersion")
+  static var appBuildVersion: String? {
+    return Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String
+  }
+  static var buildVersion: String? {
+    return Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String
+  }
+  
+  @available(*, deprecated, renamed: "topWindow")
   static var lastWindow: UIWindow {
     if #available(iOS 15.0, *) {
       let scenes = UIApplication.shared.connectedScenes
@@ -50,31 +61,59 @@ public extension UIApplication {
     }
     return UIApplication.shared.windows.filter { $0.isKeyWindow }.first!
   }
+  static var topWindow: UIWindow {
+    if #available(iOS 15.0, *) {
+      let scenes = UIApplication.shared.connectedScenes
+      let windowScene = scenes.first as? UIWindowScene
+      return windowScene!.windows.first!
+    }
+    return UIApplication.shared.windows.filter { $0.isKeyWindow }.first!
+  }
   
-  static var rootViewController: UIViewController? { lastWindow.rootViewController }
+  @available(*, deprecated, renamed: "rootController")
+  static var rootViewController: UIViewController? { topWindow.rootViewController }
+  static var rootController: UIViewController? { topWindow.rootViewController }
+  
+  @available(*, deprecated, renamed: "topController")
+  static var topViewController: UIViewController? { navigationController?.topViewController }
+  // From: https://gist.github.com/CassiusPacheco/a3887e5da50ec2f5fe0e7e9d072a4937
+  static func topController(for window: UIWindow? = topWindow) -> UIViewController? {
+    guard let rootVC = window?.rootViewController else { return nil }
+    var top: UIViewController? = rootVC
+    while true {
+      if let presented = top?.presentedViewController {
+        top = presented
+      } else if let nav = top as? UINavigationController {
+        top = nav.visibleViewController
+      } else if let tab = top as? UITabBarController {
+        top = tab.selectedViewController
+      } else {
+        break
+      }
+    }
+    return top
+  }
   
   static var navigationController: UINavigationController? {
-    if rootViewController is UINavigationController {
-      return (rootViewController as? UINavigationController)
+    if rootController is UINavigationController {
+      return (rootController as? UINavigationController)
     }
-    if rootViewController is UITabBarController {
-      let vc = (rootViewController as? UITabBarController)?.selectedViewController
+    if rootController is UITabBarController {
+      let vc = (rootController as? UITabBarController)?.selectedViewController
       if vc is UINavigationController {
         return (vc as? UINavigationController)
       }
       return vc?.navigationController
     }
-    return rootViewController?.navigationController
+    return rootController?.navigationController
   }
-  
-  static var topViewController: UIViewController? { navigationController?.topViewController }
   
   static func dismissKeyboard() {
     UIApplication.shared.sendAction(#selector(UIApplication.resignFirstResponder), to: nil, from: nil, for: nil)
   }
   
   static func call(tel: String) {
-    if let url = URL(string: "tel://\(tel)") {
+    if let url = URL(string: "tel://\(tel)"), UIApplication.shared.canOpenURL(url) {
       UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
   }

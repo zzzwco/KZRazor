@@ -27,6 +27,7 @@
 
 import Foundation
 import UIKit
+import PromiseKit
 
 class TmpController: UIViewController {
   
