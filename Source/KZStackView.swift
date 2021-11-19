@@ -153,6 +153,7 @@ public extension KZWrapper where T: KZStackView {
   
   @discardableResult
   func addBackground(view: UIView) -> T {
+    if #available(iOS 14.0, *) { return base }
     view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     base.insertSubview(view, at: 0)
     return base
