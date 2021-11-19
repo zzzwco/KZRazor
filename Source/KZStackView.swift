@@ -150,4 +150,11 @@ public extension KZWrapper where T: KZStackView {
     }
     return base
   }
+  
+  @discardableResult
+  func addBackground(view: UIView) -> T {
+    view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    base.insertSubview(view, at: 0)
+    return base
+  }
 }
