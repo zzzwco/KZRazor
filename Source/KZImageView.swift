@@ -56,18 +56,21 @@ public extension KZWrapper where T == KZImageView {
   
   @discardableResult
   func named(_ name: String) -> T {
-    return UIImageView(image: UIImage.kz.named(name))
+    base.image = .init(named: name)
+    return base
   }
   
   @discardableResult
   func uncachedNamed(_ name: String) -> T {
-    return UIImageView(image: UIImage.kz.uncached(name))
+    base.image = UIImage.kz.uncached(name)
+    return base
   }
   
   @available(iOS 13.0, *)
   @discardableResult
   func systemName(_ name: String) -> T {
-    return UIImageView(image: UIImage.kz.systemName(name))
+    base.image = UIImage.kz.systemName(name)
+    return base
   }
   
   @discardableResult
