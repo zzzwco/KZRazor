@@ -41,9 +41,9 @@ public struct KZPrint {
     line: Int = #line, printType: PrintType = .default
   ) {
     #if DEBUG
-    let content = "\n\((file as NSString).lastPathComponent)[\(line)], \(method): \n\(message)\n"
+    let content = "\(Date()) \((file as NSString).lastPathComponent)[\(line)], \(method): \n\(message)\n"
     let rawValue = printType.rawValue
-    print("\(rawValue)\(content)\(rawValue)\n")
+    print("\(rawValue) \(content)")
     #endif
   }
 
