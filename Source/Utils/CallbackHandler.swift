@@ -1,5 +1,5 @@
 //
-//  DelegateHelper.swift
+//  CallbackHandler.swift
 //  KZRazor
 //
 //  Created by zzzwco on 2021/9/18.
@@ -27,8 +27,10 @@
 
 import Foundation
 
-public class DelegateHelper<Input, Output> {
+public class CallbackHandler<Input, Output> {
   private var callback: ((Input) -> Output?)?
+  
+  public init() {}
 
   public func delegate<T: AnyObject>(on target: T, callback: ((T, Input) -> Output)?) {
     self.callback = { [weak target] input in
@@ -42,7 +44,7 @@ public class DelegateHelper<Input, Output> {
   }
 }
 
-public extension DelegateHelper where Input == Void {
+public extension CallbackHandler where Input == Void {
   func call() -> Output? {
     return call(())
   }

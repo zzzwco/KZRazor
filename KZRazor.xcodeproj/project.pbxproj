@@ -23,7 +23,7 @@
 		327D448426F58954006E0E9E /* KZFlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D447B26F58954006E0E9E /* KZFlexView.swift */; };
 		327D448526F58954006E0E9E /* UIFontEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D447C26F58954006E0E9E /* UIFontEx.swift */; };
 		327D448626F58954006E0E9E /* KZPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D447D26F58954006E0E9E /* KZPrint.swift */; };
-		327D448726F58954006E0E9E /* DelegateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D447E26F58954006E0E9E /* DelegateHelper.swift */; };
+		327D448726F58954006E0E9E /* CallbackHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D447E26F58954006E0E9E /* CallbackHandler.swift */; };
 		327D448C26F58B1C006E0E9E /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D448826F58B1C006E0E9E /* ProductView.swift */; };
 		327D449326F5D046006E0E9E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D449226F5D046006E0E9E /* Extensions.swift */; };
 		3285783E26F738D800AFF3E9 /* KZControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3285783D26F738D800AFF3E9 /* KZControl.swift */; };
@@ -65,7 +65,7 @@
 		327D447B26F58954006E0E9E /* KZFlexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZFlexView.swift; sourceTree = "<group>"; };
 		327D447C26F58954006E0E9E /* UIFontEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontEx.swift; sourceTree = "<group>"; };
 		327D447D26F58954006E0E9E /* KZPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZPrint.swift; sourceTree = "<group>"; };
-		327D447E26F58954006E0E9E /* DelegateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateHelper.swift; sourceTree = "<group>"; };
+		327D447E26F58954006E0E9E /* CallbackHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackHandler.swift; sourceTree = "<group>"; };
 		327D448826F58B1C006E0E9E /* ProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		327D449226F5D046006E0E9E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3285783D26F738D800AFF3E9 /* KZControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZControl.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 		32DBCB6F27F82772009C5A1E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				327D447E26F58954006E0E9E /* DelegateHelper.swift */,
+				327D447E26F58954006E0E9E /* CallbackHandler.swift */,
 				32D8CCA62702C1DC004189DC /* KZError.swift */,
 				327D447D26F58954006E0E9E /* KZPrint.swift */,
 				323AEE87270199FA0042EB06 /* KZUserDefaults.swift */,
@@ -365,7 +365,7 @@
 				327D448626F58954006E0E9E /* KZPrint.swift in Sources */,
 				327D448026F58954006E0E9E /* NSObjectEx.swift in Sources */,
 				3285784A26FB0F0900AFF3E9 /* KZTextField.swift in Sources */,
-				327D448726F58954006E0E9E /* DelegateHelper.swift in Sources */,
+				327D448726F58954006E0E9E /* CallbackHandler.swift in Sources */,
 				3285785026FB1A7B00AFF3E9 /* KZAlert.swift in Sources */,
 				32A26B3C27000B940023E9CE /* KZGridView.swift in Sources */,
 				327D448326F58954006E0E9E /* CGFloatEx.swift in Sources */,
