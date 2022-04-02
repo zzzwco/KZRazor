@@ -142,37 +142,69 @@
 		327D447526F587AF006E0E9E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				327D447A26F58954006E0E9E /* CGFloatEx.swift */,
-				327D447E26F58954006E0E9E /* DelegateHelper.swift */,
-				327D447826F58954006E0E9E /* KZ.swift */,
+				32DBCB6E27F8276E009C5A1E /* Extensions */,
+				32DBCB7027F82794009C5A1E /* General */,
+				32DBCB6D27F82767009C5A1E /* UI */,
+				32DBCB6F27F82772009C5A1E /* Utils */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		32DBCB6D27F82767009C5A1E /* UI */ = {
+			isa = PBXGroup;
+			children = (
 				3285784F26FB1A7B00AFF3E9 /* KZAlert.swift */,
 				32235DFB26F62E58002E06A8 /* KZButton.swift */,
 				3285783D26F738D800AFF3E9 /* KZControl.swift */,
-				32B630082706B8FC00817F56 /* KZShapeView.swift */,
-				32D8CCA62702C1DC004189DC /* KZError.swift */,
 				327D447B26F58954006E0E9E /* KZFlexView.swift */,
 				32A26B3B27000B940023E9CE /* KZGridView.swift */,
 				3285785926FB5C5300AFF3E9 /* KZHud.swift */,
 				3285784126F7563000AFF3E9 /* KZImage.swift */,
 				3285783F26F755AE00AFF3E9 /* KZImageView.swift */,
 				3285784326F8E5C600AFF3E9 /* KZLabel.swift */,
-				327D447D26F58954006E0E9E /* KZPrint.swift */,
 				32D8CCAF27033AA9004189DC /* KZScrollView.swift */,
+				32B630082706B8FC00817F56 /* KZShapeView.swift */,
 				32D8CCA42702ACF1004189DC /* KZStackView.swift */,
 				3285784926FB0F0900AFF3E9 /* KZTextField.swift */,
 				3285784B26FB159500AFF3E9 /* KZTextView.swift */,
 				3285784D26FB1A2600AFF3E9 /* KZTips.swift */,
-				323AEE87270199FA0042EB06 /* KZUserDefaults.swift */,
 				327D447926F58954006E0E9E /* KZView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		32DBCB6E27F8276E009C5A1E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				327D447A26F58954006E0E9E /* CGFloatEx.swift */,
 				327D447726F58954006E0E9E /* NSObjectEx.swift */,
-				327D447626F58954006E0E9E /* Reflectable.swift */,
 				3285785326FB1C6100AFF3E9 /* UIApplicationEx.swift */,
+				3299A3A82719180D00AA9CD2 /* UIColorEx.swift */,
 				327D447C26F58954006E0E9E /* UIFontEx.swift */,
 				3285785126FB1B0800AFF3E9 /* UIScreenEx.swift */,
 				3285785526FB1D8300AFF3E9 /* UIViewControllerEx.swift */,
-				3299A3A82719180D00AA9CD2 /* UIColorEx.swift */,
 			);
-			path = Source;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		32DBCB6F27F82772009C5A1E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				327D447E26F58954006E0E9E /* DelegateHelper.swift */,
+				32D8CCA62702C1DC004189DC /* KZError.swift */,
+				327D447D26F58954006E0E9E /* KZPrint.swift */,
+				323AEE87270199FA0042EB06 /* KZUserDefaults.swift */,
+				327D447626F58954006E0E9E /* Reflectable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		32DBCB7027F82794009C5A1E /* General */ = {
+			isa = PBXGroup;
+			children = (
+				327D447826F58954006E0E9E /* KZ.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 		7774CBF0D112AF30EC85CCB5 /* Frameworks */ = {

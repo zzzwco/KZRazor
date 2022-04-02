@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "KZRazor"
-  spec.version      = "0.0.46"
+  spec.version      = "0.0.47"
   spec.summary      = "A tool kit"
 
 
@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.swift_versions = "5.0"
   spec.source       = { :git => "https://github.com/zzzwco/KZRazor.git", :tag => spec.version }
-  spec.source_files  = "Source", "Source/*.swift"
+  spec.source_files  = "Source", "Source/**/*.swift"
 
   spec.dependency "SnapKit"
   spec.dependency "QMUIKit"
