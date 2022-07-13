@@ -44,9 +44,7 @@ public struct KZPrint {
     line: Int = #line
   ) {
     #if DEBUG
-    let msg = msg.enumerated().map { i, v in
-      return "\(i + 1). \(v)\n"
-    }.joined()
+    let msg = msg.map { "\($0)\n" }.joined()
     let content = "\(Date()) \((file as NSString).lastPathComponent)[\(line)], \(method): \n\(msg)\n"
     let rawValue = printType.rawValue
     print("\(rawValue) \(content)")
