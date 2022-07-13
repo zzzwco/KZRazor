@@ -35,7 +35,25 @@ public struct KZPrint {
     case warning = "⚠️⚠️⚠️"
     case error = "❌❌❌"
   }
+  
+  public static func log<T>(
+    _ msg: T...,
+    printType: PrintType = .default,
+    file: String = #file,
+    method: String = #function,
+    line: Int = #line
+  ) {
+    #if DEBUG
+    let msg = msg.enumerated().map { i, v in
+      return "\(i + 1). \(v)\n"
+    }.joined()
+    let content = "\(Date()) \((file as NSString).lastPathComponent)[\(line)], \(method): \n\(msg)\n"
+    let rawValue = printType.rawValue
+    print("\(rawValue) \(content)")
+    #endif
+  }
 
+  @available(*, deprecated, renamed: "log(_:)")
   public static func log<T>(
     message: T..., file: String = #file, method: String = #function,
     line: Int = #line, printType: PrintType = .default
