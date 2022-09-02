@@ -1,5 +1,5 @@
 //
-//  KZSegmentContainer.swift
+//  SampleSegmentContainer.swift
 //  KZRazor
 //
 //  Created by zzzwco on 2022/9/2.
@@ -27,48 +27,66 @@
 
 import UIKit
 
-open class KZSegmentContainer: UIView {
+class SampleSegmentContainer: UIViewController {
   
-  public func select(at index: Int) {
-    self.selectedIndex = index
-    showElementView()
-  }
+  let tv = KZSegmentContainer(types: [UIView.self])
   
-  public private(set) var selectedIndex: Int = 0
-  
-  public init(types: [UIView.Type], selectedIndex: Int = 0) {
-    self.selectedIndex = selectedIndex
-    self.types = types
-    self.elemetnViews = Array(repeating: nil, count: types.count)
-    super.init(frame: .zero)
-    container.kz.addToView(self) { make in
-      make.edges.equalToSuperview()
-    }
-  }
-  
-  public required init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-  
-  
-  private let container = KZFlexView(axis: .horizontal)
-  private var types: [UIView.Type]
-  private var elemetnViews: [UIView?]
-  
-  private func showElementView() {
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
   }
 }
 
-open class KZSegmentContent: UIView {
-  
+
+struct Model1 {
+  var name1: String?
 }
 
-public protocol KZSegmentContainerView {
+struct Model2 {
+  var name2: String?
+}
+
+class View1: UIView, KZSegmentContainerView {
   
-  associatedtype Model
+  var model: Model1 = .init()
   
-  var model: Self.Model { get }
+  func refreshUI(model: Model1) {
+    titleL.kz.text(model.name1)
+  }
   
-  func refreshUI(model: Self.Model)
+  var titleL = KZLabel()
+  
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    titleL.kz.addToView(self) { make in
+      make.edges.equalToSuperview()
+    }
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+}
+
+
+class View2: UIView, KZSegmentContainerView {
+  
+  var model: Model2 = .init()
+  
+  func refreshUI(model: Model2) {
+    titleL.kz.text(model.name2).kz.textColor(.random)
+  }
+  
+  var titleL = KZLabel()
+  
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    titleL.kz.addToView(self) { make in
+      make.edges.equalToSuperview()
+    }
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
 }

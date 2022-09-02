@@ -9,8 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
   
-  private let data = [
-    ("KZFlexView", SampleKZFlexView.self)
+  private let data: [(String, UIViewController.Type)] = [
+    ("KZFlexView", SampleKZFlexView.self),
+    ("KZSegmentContainer", SampleSegmentContainer.self)
   ]
   
   override func viewDidLoad() {
