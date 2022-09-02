@@ -1,8 +1,8 @@
 //
-//  TmpController.swift
+//  KZSegmentContainer.swift
 //  KZRazor
 //
-//  Created by zzzwco on 2021/9/23.
+//  Created by zzzwco on 2022/9/2.
 //
 //  Copyright (c) 2021 zzzwco <zzzwco@outlook.com>
 //
@@ -26,27 +26,3 @@
 //
 
 import Foundation
-import UIKit
-import PromiseKit
-
-class TmpController: UIViewController {
-  
-  override func viewDidLoad() {
-    view.backgroundColor = .white
-    
-  }
-  
-  override func viewDidLayoutSubviews() {
-    super.viewDidLayoutSubviews()
-    
-  }
-  
-  @objc func action() {
-    
-  }
-  
-  deinit {
-    KZPrint.log(message: self)
-  }
-}
-
