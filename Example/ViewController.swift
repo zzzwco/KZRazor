@@ -11,7 +11,6 @@ class ViewController: UIViewController {
   
   private let data: [(String, UIViewController.Type)] = [
     ("KZFlexView", SampleKZFlexView.self),
-    ("KZSegmentContainer", SampleSegmentContainer.self)
   ]
   
   override func viewDidLoad() {

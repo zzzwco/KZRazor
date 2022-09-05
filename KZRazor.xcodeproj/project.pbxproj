@@ -44,9 +44,7 @@
 		32D8CCA52702ACF1004189DC /* KZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D8CCA42702ACF1004189DC /* KZStackView.swift */; };
 		32D8CCA72702C1DC004189DC /* KZError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D8CCA62702C1DC004189DC /* KZError.swift */; };
 		32D8CCB027033AA9004189DC /* KZScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D8CCAF27033AA9004189DC /* KZScrollView.swift */; };
-		32F02F7628C1FAFA0041D1E9 /* KZSegmentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F02F7528C1FAFA0041D1E9 /* KZSegmentContainer.swift */; };
 		32F02F7828C201D30041D1E9 /* SampleKZFlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F02F7728C201D30041D1E9 /* SampleKZFlexView.swift */; };
-		32F02F7A28C205DA0041D1E9 /* SampleSegmentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F02F7928C205DA0041D1E9 /* SampleSegmentContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,9 +86,7 @@
 		32D8CCA42702ACF1004189DC /* KZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZStackView.swift; sourceTree = "<group>"; };
 		32D8CCA62702C1DC004189DC /* KZError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZError.swift; sourceTree = "<group>"; };
 		32D8CCAF27033AA9004189DC /* KZScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZScrollView.swift; sourceTree = "<group>"; };
-		32F02F7528C1FAFA0041D1E9 /* KZSegmentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZSegmentContainer.swift; sourceTree = "<group>"; };
 		32F02F7728C201D30041D1E9 /* SampleKZFlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleKZFlexView.swift; sourceTree = "<group>"; };
-		32F02F7928C205DA0041D1E9 /* SampleSegmentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSegmentContainer.swift; sourceTree = "<group>"; };
 		8823FFAADD882A4DF4E98252 /* Pods-KZRazor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZRazor.release.xcconfig"; path = "Target Support Files/Pods-KZRazor/Pods-KZRazor.release.xcconfig"; sourceTree = "<group>"; };
 		B69DBD205A8840A1B993F4CB /* Pods-KZRazor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZRazor.debug.xcconfig"; path = "Target Support Files/Pods-KZRazor/Pods-KZRazor.debug.xcconfig"; sourceTree = "<group>"; };
 		C5F88F387CBD8EBDDF457848 /* Pods_KZRazor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KZRazor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,7 +130,6 @@
 				327D448826F58B1C006E0E9E /* ProductView.swift */,
 				327D446526F58793006E0E9E /* ViewController.swift */,
 				32F02F7728C201D30041D1E9 /* SampleKZFlexView.swift */,
-				32F02F7928C205DA0041D1E9 /* SampleSegmentContainer.swift */,
 				327D449226F5D046006E0E9E /* Extensions.swift */,
 				327D446726F58793006E0E9E /* Main.storyboard */,
 				327D446A26F58795006E0E9E /* Assets.xcassets */,
@@ -168,7 +163,6 @@
 				3285783F26F755AE00AFF3E9 /* KZImageView.swift */,
 				3285784326F8E5C600AFF3E9 /* KZLabel.swift */,
 				32D8CCAF27033AA9004189DC /* KZScrollView.swift */,
-				32F02F7528C1FAFA0041D1E9 /* KZSegmentContainer.swift */,
 				32B630082706B8FC00817F56 /* KZShapeView.swift */,
 				32D8CCA42702ACF1004189DC /* KZStackView.swift */,
 				3285784926FB0F0900AFF3E9 /* KZTextField.swift */,
@@ -351,7 +345,6 @@
 				3285785426FB1C6100AFF3E9 /* UIApplicationEx.swift in Sources */,
 				327D447F26F58954006E0E9E /* Reflectable.swift in Sources */,
 				327D448126F58954006E0E9E /* KZ.swift in Sources */,
-				32F02F7628C1FAFA0041D1E9 /* KZSegmentContainer.swift in Sources */,
 				3285784426F8E5C600AFF3E9 /* KZLabel.swift in Sources */,
 				32D8CCB027033AA9004189DC /* KZScrollView.swift in Sources */,
 				3285783E26F738D800AFF3E9 /* KZControl.swift in Sources */,
@@ -359,7 +352,6 @@
 				3285785226FB1B0800AFF3E9 /* UIScreenEx.swift in Sources */,
 				32F02F7828C201D30041D1E9 /* SampleKZFlexView.swift in Sources */,
 				3285784226F7563000AFF3E9 /* KZImage.swift in Sources */,
-				32F02F7A28C205DA0041D1E9 /* SampleSegmentContainer.swift in Sources */,
 				327D448426F58954006E0E9E /* KZFlexView.swift in Sources */,
 				327D448226F58954006E0E9E /* KZView.swift in Sources */,
 				3285784E26FB1A2600AFF3E9 /* KZTips.swift in Sources */,
